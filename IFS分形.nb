@@ -1,0 +1,2175 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    125893,       2167]
+NotebookOptionsPosition[    125126,       2145]
+NotebookOutlinePosition[    125483,       2161]
+CellTagsIndexPosition[    125440,       2158]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:672c\:849f\:84bb\:5199\:7684\:6e23\:4ee3\:7801", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"c", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"x_", ",", "y_", ",", "z_", ",", "o_"}], "]"}], "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"1", "/", "2"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "o"}], "+", "x", "+", "y", "+", "z"}], ")"}]}], ",", 
+       RowBox[{
+        RowBox[{"1", "/", "2"}], " ", 
+        RowBox[{"(", 
+         RowBox[{"o", "-", "x", "+", "y", "+", "z"}], ")"}]}]}], "}"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"b", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"f", "@@", 
+             RowBox[{"Flatten", "@", 
+              RowBox[{
+               RowBox[{"Partition", "[", 
+                RowBox[{"c", ",", "2", ",", "1"}], "]"}], "[", 
+               RowBox[{"[", "#", "]"}], "]"}]}]}], ")"}], "&"}], "/@", 
+          RowBox[{"Range", "[", 
+           RowBox[{
+            RowBox[{"Length", "[", "c", "]"}], "-", "1"}], "]"}]}]}], ";", 
+        RowBox[{"c", "=", 
+         RowBox[{"Riffle", "[", 
+          RowBox[{"c", ",", "b"}], "]"}]}]}], ",", "10"}], "]"}], ";"}], "//",
+     "AbsoluteTiming"}], "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "@", 
+    RowBox[{"Line", "@", "c"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.7639022785467205`*^9, 3.7639022792948613`*^9}, {
+   3.763902317728171*^9, 3.763902390620026*^9}, {3.763902427778263*^9, 
+   3.763902458713462*^9}, 3.7639459465654697`*^9, {3.763945989940283*^9, 
+   3.7639460504483185`*^9}, {3.7639641130089893`*^9, 
+   3.763964154894476*^9}},ExpressionUUID->"c135087d-3d67-4c88-afc7-\
+4581df583d59"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.04960365544932513`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{{3.763902378552915*^9, 3.763902400103943*^9}, {
+  3.763902439122368*^9, 3.76390245961512*^9}, {3.7639459826607*^9, 
+  3.763946057217164*^9}},
+ CellLabel->"Out[40]=",ExpressionUUID->"82d68a65-a10a-4e1f-920c-15c67934b0c4"],
+
+Cell[BoxData[
+ GraphicsBox[
+  LineBox[NCache[{{-1, 0}, {-1, Rational[1, 16]}, {
+     Rational[-15, 16], Rational[1, 16]}, {
+     Rational[-7, 8], Rational[1, 16]}, {Rational[-7, 8], 0}, {
+     Rational[-13, 16], 0}, {Rational[-13, 16], Rational[-1, 16]}, {
+     Rational[-13, 16], Rational[-1, 8]}, {
+     Rational[-7, 8], Rational[-1, 8]}, {
+     Rational[-13, 16], Rational[-1, 8]}, {
+     Rational[-13, 16], Rational[-3, 16]}, {
+     Rational[-13, 16], Rational[-1, 4]}, {
+     Rational[-7, 8], Rational[-1, 4]}, {Rational[-7, 8], Rational[-5, 16]}, {
+     Rational[-15, 16], Rational[-5, 16]}, {-1, Rational[-5, 16]}, {-1, 
+      Rational[-1, 4]}, {Rational[-15, 16], Rational[-1, 4]}, {
+     Rational[-15, 16], Rational[-5, 16]}, {
+     Rational[-15, 16], Rational[-3, 8]}, {-1, Rational[-3, 8]}, {-1, 
+      Rational[-7, 16]}, {Rational[-17, 16], Rational[-7, 16]}, {
+     Rational[-9, 8], Rational[-7, 16]}, {Rational[-9, 8], Rational[-3, 8]}, {
+     Rational[-9, 8], Rational[-7, 16]}, {
+     Rational[-19, 16], Rational[-7, 16]}, {
+     Rational[-5, 4], Rational[-7, 16]}, {Rational[-5, 4], Rational[-3, 8]}, {
+     Rational[-21, 16], Rational[-3, 8]}, {
+     Rational[-21, 16], Rational[-5, 16]}, {
+     Rational[-21, 16], Rational[-1, 4]}, {
+     Rational[-5, 4], Rational[-1, 4]}, {
+     Rational[-19, 16], Rational[-1, 4]}, {
+     Rational[-19, 16], Rational[-5, 16]}, {
+     Rational[-19, 16], Rational[-3, 8]}, {
+     Rational[-5, 4], Rational[-3, 8]}, {Rational[-5, 4], Rational[-7, 16]}, {
+     Rational[-21, 16], Rational[-7, 16]}, {
+     Rational[-11, 8], Rational[-7, 16]}, {
+     Rational[-11, 8], Rational[-3, 8]}, {
+     Rational[-11, 8], Rational[-7, 16]}, {
+     Rational[-23, 16], Rational[-7, 16]}, {
+     Rational[-3, 2], Rational[-7, 16]}, {Rational[-3, 2], Rational[-3, 8]}, {
+     Rational[-25, 16], Rational[-3, 8]}, {
+     Rational[-25, 16], Rational[-5, 16]}, {
+     Rational[-25, 16], Rational[-1, 4]}, {
+     Rational[-3, 2], Rational[-1, 4]}, {Rational[-3, 2], Rational[-5, 16]}, {
+     Rational[-25, 16], Rational[-5, 16]}, {
+     Rational[-13, 8], Rational[-5, 16]}, {
+     Rational[-13, 8], Rational[-1, 4]}, {
+     Rational[-27, 16], Rational[-1, 4]}, {
+     Rational[-27, 16], Rational[-3, 16]}, {
+     Rational[-27, 16], Rational[-1, 8]}, {
+     Rational[-13, 8], Rational[-1, 8]}, {
+     Rational[-27, 16], Rational[-1, 8]}, {
+     Rational[-27, 16], Rational[-1, 16]}, {Rational[-27, 16], 0}, {
+     Rational[-13, 8], 0}, {Rational[-13, 8], Rational[1, 16]}, {
+     Rational[-25, 16], Rational[1, 16]}, {
+     Rational[-3, 2], Rational[1, 16]}, {Rational[-3, 2], 0}, {
+     Rational[-23, 16], 0}, {Rational[-23, 16], Rational[-1, 16]}, {
+     Rational[-23, 16], Rational[-1, 8]}, {
+     Rational[-3, 2], Rational[-1, 8]}, {Rational[-3, 2], Rational[-3, 16]}, {
+     Rational[-25, 16], Rational[-3, 16]}, {
+     Rational[-13, 8], Rational[-3, 16]}, {
+     Rational[-13, 8], Rational[-1, 8]}, {
+     Rational[-13, 8], Rational[-3, 16]}, {
+     Rational[-27, 16], Rational[-3, 16]}, {
+     Rational[-7, 4], Rational[-3, 16]}, {Rational[-7, 4], Rational[-1, 8]}, {
+     Rational[-29, 16], Rational[-1, 8]}, {
+     Rational[-29, 16], Rational[-1, 16]}, {Rational[-29, 16], 0}, {
+     Rational[-7, 4], 0}, {Rational[-7, 4], Rational[-1, 16]}, {
+     Rational[-29, 16], Rational[-1, 16]}, {
+     Rational[-15, 8], Rational[-1, 16]}, {Rational[-15, 8], 0}, {
+     Rational[-31, 16], 0}, {Rational[-31, 16], Rational[1, 16]}, {
+     Rational[-31, 16], Rational[1, 8]}, {Rational[-15, 8], Rational[1, 8]}, {
+     Rational[-31, 16], Rational[1, 8]}, {
+     Rational[-31, 16], Rational[3, 16]}, {
+     Rational[-31, 16], Rational[1, 4]}, {Rational[-15, 8], Rational[1, 4]}, {
+     Rational[-15, 8], Rational[5, 16]}, {
+     Rational[-29, 16], Rational[5, 16]}, {
+     Rational[-7, 4], Rational[5, 16]}, {Rational[-7, 4], Rational[1, 4]}, {
+     Rational[-7, 4], Rational[3, 16]}, {
+     Rational[-29, 16], Rational[3, 16]}, {
+     Rational[-15, 8], Rational[3, 16]}, {Rational[-15, 8], Rational[1, 4]}, {
+     Rational[-31, 16], Rational[1, 4]}, {
+     Rational[-31, 16], Rational[5, 16]}, {
+     Rational[-31, 16], Rational[3, 8]}, {Rational[-15, 8], Rational[3, 8]}, {
+     Rational[-31, 16], Rational[3, 8]}, {
+     Rational[-31, 16], Rational[7, 16]}, {
+     Rational[-31, 16], Rational[1, 2]}, {Rational[-15, 8], Rational[1, 2]}, {
+     Rational[-15, 8], Rational[9, 16]}, {
+     Rational[-29, 16], Rational[9, 16]}, {
+     Rational[-7, 4], Rational[9, 16]}, {Rational[-7, 4], Rational[1, 2]}, {
+     Rational[-29, 16], Rational[1, 2]}, {
+     Rational[-29, 16], Rational[9, 16]}, {
+     Rational[-29, 16], Rational[5, 8]}, {Rational[-7, 4], Rational[5, 8]}, {
+     Rational[-7, 4], Rational[11, 16]}, {
+     Rational[-27, 16], Rational[11, 16]}, {
+     Rational[-13, 8], Rational[11, 16]}, {
+     Rational[-13, 8], Rational[5, 8]}, {
+     Rational[-13, 8], Rational[11, 16]}, {
+     Rational[-25, 16], Rational[11, 16]}, {
+     Rational[-3, 2], Rational[11, 16]}, {Rational[-3, 2], Rational[5, 8]}, {
+     Rational[-23, 16], Rational[5, 8]}, {
+     Rational[-23, 16], Rational[9, 16]}, {
+     Rational[-23, 16], Rational[1, 2]}, {Rational[-3, 2], Rational[1, 2]}, {
+     Rational[-23, 16], Rational[1, 2]}, {
+     Rational[-23, 16], Rational[7, 16]}, {
+     Rational[-23, 16], Rational[3, 8]}, {Rational[-3, 2], Rational[3, 8]}, {
+     Rational[-3, 2], Rational[5, 16]}, {
+     Rational[-25, 16], Rational[5, 16]}, {
+     Rational[-13, 8], Rational[5, 16]}, {Rational[-13, 8], Rational[3, 8]}, {
+     Rational[-13, 8], Rational[5, 16]}, {
+     Rational[-27, 16], Rational[5, 16]}, {
+     Rational[-7, 4], Rational[5, 16]}, {Rational[-7, 4], Rational[3, 8]}, {
+     Rational[-29, 16], Rational[3, 8]}, {
+     Rational[-29, 16], Rational[7, 16]}, {
+     Rational[-29, 16], Rational[1, 2]}, {Rational[-7, 4], Rational[1, 2]}, {
+     Rational[-7, 4], Rational[7, 16]}, {
+     Rational[-29, 16], Rational[7, 16]}, {
+     Rational[-15, 8], Rational[7, 16]}, {Rational[-15, 8], Rational[1, 2]}, {
+     Rational[-31, 16], Rational[1, 2]}, {
+     Rational[-31, 16], Rational[9, 16]}, {
+     Rational[-31, 16], Rational[5, 8]}, {Rational[-15, 8], Rational[5, 8]}, {
+     Rational[-31, 16], Rational[5, 8]}, {
+     Rational[-31, 16], Rational[11, 16]}, {
+     Rational[-31, 16], Rational[3, 4]}, {Rational[-15, 8], Rational[3, 4]}, {
+     Rational[-15, 8], Rational[13, 16]}, {
+     Rational[-29, 16], Rational[13, 16]}, {
+     Rational[-7, 4], Rational[13, 16]}, {Rational[-7, 4], Rational[3, 4]}, {
+     Rational[-7, 4], Rational[11, 16]}, {
+     Rational[-29, 16], Rational[11, 16]}, {
+     Rational[-15, 8], Rational[11, 16]}, {
+     Rational[-15, 8], Rational[3, 4]}, {Rational[-31, 16], Rational[3, 4]}, {
+     Rational[-31, 16], Rational[13, 16]}, {
+     Rational[-31, 16], Rational[7, 8]}, {Rational[-15, 8], Rational[7, 8]}, {
+     Rational[-31, 16], Rational[7, 8]}, {
+     Rational[-31, 16], Rational[15, 16]}, {Rational[-31, 16], 1}, {
+     Rational[-15, 8], 1}, {Rational[-15, 8], Rational[17, 16]}, {
+     Rational[-29, 16], Rational[17, 16]}, {
+     Rational[-7, 4], Rational[17, 16]}, {Rational[-7, 4], 1}, {
+     Rational[-29, 16], 1}, {Rational[-29, 16], Rational[17, 16]}, {
+     Rational[-29, 16], Rational[9, 8]}, {Rational[-7, 4], Rational[9, 8]}, {
+     Rational[-7, 4], Rational[19, 16]}, {
+     Rational[-27, 16], Rational[19, 16]}, {
+     Rational[-13, 8], Rational[19, 16]}, {
+     Rational[-13, 8], Rational[9, 8]}, {
+     Rational[-13, 8], Rational[19, 16]}, {
+     Rational[-25, 16], Rational[19, 16]}, {
+     Rational[-3, 2], Rational[19, 16]}, {Rational[-3, 2], Rational[9, 8]}, {
+     Rational[-23, 16], Rational[9, 8]}, {
+     Rational[-23, 16], Rational[17, 16]}, {Rational[-23, 16], 1}, {
+     Rational[-3, 2], 1}, {Rational[-3, 2], Rational[15, 16]}, {
+     Rational[-25, 16], Rational[15, 16]}, {
+     Rational[-13, 8], Rational[15, 16]}, {Rational[-13, 8], 1}, {
+     Rational[-27, 16], 1}, {Rational[-27, 16], Rational[17, 16]}, {
+     Rational[-27, 16], Rational[9, 8]}, {Rational[-13, 8], Rational[9, 8]}, {
+     Rational[-27, 16], Rational[9, 8]}, {
+     Rational[-27, 16], Rational[19, 16]}, {
+     Rational[-27, 16], Rational[5, 4]}, {Rational[-13, 8], Rational[5, 4]}, {
+     Rational[-13, 8], Rational[21, 16]}, {
+     Rational[-25, 16], Rational[21, 16]}, {
+     Rational[-3, 2], Rational[21, 16]}, {Rational[-3, 2], Rational[5, 4]}, {
+     Rational[-25, 16], Rational[5, 4]}, {
+     Rational[-25, 16], Rational[21, 16]}, {
+     Rational[-25, 16], Rational[11, 8]}, {
+     Rational[-3, 2], Rational[11, 8]}, {Rational[-3, 2], Rational[23, 16]}, {
+     Rational[-23, 16], Rational[23, 16]}, {
+     Rational[-11, 8], Rational[23, 16]}, {
+     Rational[-11, 8], Rational[11, 8]}, {
+     Rational[-11, 8], Rational[23, 16]}, {
+     Rational[-21, 16], Rational[23, 16]}, {
+     Rational[-5, 4], Rational[23, 16]}, {Rational[-5, 4], Rational[11, 8]}, {
+     Rational[-19, 16], Rational[11, 8]}, {
+     Rational[-19, 16], Rational[21, 16]}, {
+     Rational[-19, 16], Rational[5, 4]}, {Rational[-5, 4], Rational[5, 4]}, {
+     Rational[-21, 16], Rational[5, 4]}, {
+     Rational[-21, 16], Rational[21, 16]}, {
+     Rational[-21, 16], Rational[11, 8]}, {
+     Rational[-5, 4], Rational[11, 8]}, {Rational[-5, 4], Rational[23, 16]}, {
+     Rational[-19, 16], Rational[23, 16]}, {
+     Rational[-9, 8], Rational[23, 16]}, {Rational[-9, 8], Rational[11, 8]}, {
+     Rational[-9, 8], Rational[23, 16]}, {
+     Rational[-17, 16], Rational[23, 16]}, {-1, Rational[23, 16]}, {-1, 
+      Rational[11, 8]}, {Rational[-15, 16], Rational[11, 8]}, {
+     Rational[-15, 16], Rational[21, 16]}, {
+     Rational[-15, 16], Rational[5, 4]}, {-1, Rational[5, 4]}, {-1, Rational[
+      21, 16]}, {Rational[-15, 16], Rational[21, 16]}, {
+     Rational[-7, 8], Rational[21, 16]}, {Rational[-7, 8], Rational[5, 4]}, {
+     Rational[-13, 16], Rational[5, 4]}, {
+     Rational[-13, 16], Rational[19, 16]}, {
+     Rational[-13, 16], Rational[9, 8]}, {Rational[-7, 8], Rational[9, 8]}, {
+     Rational[-13, 16], Rational[9, 8]}, {
+     Rational[-13, 16], Rational[17, 16]}, {Rational[-13, 16], 1}, {
+     Rational[-7, 8], 1}, {Rational[-7, 8], Rational[15, 16]}, {
+     Rational[-15, 16], Rational[15, 16]}, {-1, Rational[15, 16]}, {-1, 1}, {
+     Rational[-15, 16], 1}, {Rational[-15, 16], Rational[15, 16]}, {
+     Rational[-15, 16], Rational[7, 8]}, {-1, Rational[7, 8]}, {-1, Rational[
+      13, 16]}, {Rational[-17, 16], Rational[13, 16]}, {
+     Rational[-9, 8], Rational[13, 16]}, {Rational[-9, 8], Rational[7, 8]}, {
+     Rational[-9, 8], Rational[13, 16]}, {
+     Rational[-19, 16], Rational[13, 16]}, {
+     Rational[-5, 4], Rational[13, 16]}, {Rational[-5, 4], Rational[7, 8]}, {
+     Rational[-21, 16], Rational[7, 8]}, {
+     Rational[-21, 16], Rational[15, 16]}, {Rational[-21, 16], 1}, {
+     Rational[-5, 4], 1}, {Rational[-5, 4], Rational[15, 16]}, {
+     Rational[-21, 16], Rational[15, 16]}, {
+     Rational[-11, 8], Rational[15, 16]}, {Rational[-11, 8], 1}, {
+     Rational[-23, 16], 1}, {Rational[-23, 16], Rational[17, 16]}, {
+     Rational[-23, 16], Rational[9, 8]}, {Rational[-11, 8], Rational[9, 8]}, {
+     Rational[-23, 16], Rational[9, 8]}, {
+     Rational[-23, 16], Rational[19, 16]}, {
+     Rational[-23, 16], Rational[5, 4]}, {Rational[-11, 8], Rational[5, 4]}, {
+     Rational[-11, 8], Rational[21, 16]}, {
+     Rational[-21, 16], Rational[21, 16]}, {
+     Rational[-5, 4], Rational[21, 16]}, {Rational[-5, 4], Rational[5, 4]}, {
+     Rational[-5, 4], Rational[19, 16]}, {
+     Rational[-21, 16], Rational[19, 16]}, {
+     Rational[-11, 8], Rational[19, 16]}, {
+     Rational[-11, 8], Rational[5, 4]}, {Rational[-23, 16], Rational[5, 4]}, {
+     Rational[-23, 16], Rational[21, 16]}, {
+     Rational[-23, 16], Rational[11, 8]}, {
+     Rational[-11, 8], Rational[11, 8]}, {
+     Rational[-23, 16], Rational[11, 8]}, {
+     Rational[-23, 16], Rational[23, 16]}, {
+     Rational[-23, 16], Rational[3, 2]}, {Rational[-11, 8], Rational[3, 2]}, {
+     Rational[-11, 8], Rational[25, 16]}, {
+     Rational[-21, 16], Rational[25, 16]}, {
+     Rational[-5, 4], Rational[25, 16]}, {Rational[-5, 4], Rational[3, 2]}, {
+     Rational[-21, 16], Rational[3, 2]}, {
+     Rational[-21, 16], Rational[25, 16]}, {
+     Rational[-21, 16], Rational[13, 8]}, {
+     Rational[-5, 4], Rational[13, 8]}, {Rational[-5, 4], Rational[27, 16]}, {
+     Rational[-19, 16], Rational[27, 16]}, {
+     Rational[-9, 8], Rational[27, 16]}, {Rational[-9, 8], Rational[13, 8]}, {
+     Rational[-9, 8], Rational[27, 16]}, {
+     Rational[-17, 16], Rational[27, 16]}, {-1, Rational[27, 16]}, {-1, 
+      Rational[13, 8]}, {Rational[-15, 16], Rational[13, 8]}, {
+     Rational[-15, 16], Rational[25, 16]}, {
+     Rational[-15, 16], Rational[3, 2]}, {-1, Rational[3, 2]}, {-1, Rational[
+      23, 16]}, {Rational[-17, 16], Rational[23, 16]}, {
+     Rational[-9, 8], Rational[23, 16]}, {Rational[-9, 8], Rational[3, 2]}, {
+     Rational[-19, 16], Rational[3, 2]}, {
+     Rational[-19, 16], Rational[25, 16]}, {
+     Rational[-19, 16], Rational[13, 8]}, {
+     Rational[-9, 8], Rational[13, 8]}, {
+     Rational[-19, 16], Rational[13, 8]}, {
+     Rational[-19, 16], Rational[27, 16]}, {
+     Rational[-19, 16], Rational[7, 4]}, {Rational[-9, 8], Rational[7, 4]}, {
+     Rational[-9, 8], Rational[29, 16]}, {
+     Rational[-17, 16], Rational[29, 16]}, {-1, Rational[29, 16]}, {-1, 
+      Rational[7, 4]}, {Rational[-17, 16], Rational[7, 4]}, {
+     Rational[-17, 16], Rational[29, 16]}, {
+     Rational[-17, 16], Rational[15, 8]}, {-1, Rational[15, 8]}, {-1, 
+      Rational[31, 16]}, {Rational[-15, 16], Rational[31, 16]}, {
+     Rational[-7, 8], Rational[31, 16]}, {Rational[-7, 8], Rational[15, 8]}, {
+     Rational[-7, 8], Rational[31, 16]}, {
+     Rational[-13, 16], Rational[31, 16]}, {
+     Rational[-3, 4], Rational[31, 16]}, {Rational[-3, 4], Rational[15, 8]}, {
+     Rational[-11, 16], Rational[15, 8]}, {
+     Rational[-11, 16], Rational[29, 16]}, {
+     Rational[-11, 16], Rational[7, 4]}, {Rational[-3, 4], Rational[7, 4]}, {
+     Rational[-13, 16], Rational[7, 4]}, {
+     Rational[-13, 16], Rational[29, 16]}, {
+     Rational[-13, 16], Rational[15, 8]}, {
+     Rational[-3, 4], Rational[15, 8]}, {Rational[-3, 4], Rational[31, 16]}, {
+     Rational[-11, 16], Rational[31, 16]}, {
+     Rational[-5, 8], Rational[31, 16]}, {Rational[-5, 8], Rational[15, 8]}, {
+     Rational[-5, 8], Rational[31, 16]}, {
+     Rational[-9, 16], Rational[31, 16]}, {
+     Rational[-1, 2], Rational[31, 16]}, {Rational[-1, 2], Rational[15, 8]}, {
+     Rational[-7, 16], Rational[15, 8]}, {
+     Rational[-7, 16], Rational[29, 16]}, {
+     Rational[-7, 16], Rational[7, 4]}, {Rational[-1, 2], Rational[7, 4]}, {
+     Rational[-1, 2], Rational[29, 16]}, {
+     Rational[-7, 16], Rational[29, 16]}, {
+     Rational[-3, 8], Rational[29, 16]}, {Rational[-3, 8], Rational[7, 4]}, {
+     Rational[-5, 16], Rational[7, 4]}, {
+     Rational[-5, 16], Rational[27, 16]}, {
+     Rational[-5, 16], Rational[13, 8]}, {Rational[-3, 8], Rational[13, 8]}, {
+     Rational[-5, 16], Rational[13, 8]}, {
+     Rational[-5, 16], Rational[25, 16]}, {
+     Rational[-5, 16], Rational[3, 2]}, {Rational[-3, 8], Rational[3, 2]}, {
+     Rational[-3, 8], Rational[23, 16]}, {
+     Rational[-7, 16], Rational[23, 16]}, {
+     Rational[-1, 2], Rational[23, 16]}, {Rational[-1, 2], Rational[3, 2]}, {
+     Rational[-1, 2], Rational[23, 16]}, {
+     Rational[-9, 16], Rational[23, 16]}, {
+     Rational[-5, 8], Rational[23, 16]}, {Rational[-5, 8], Rational[3, 2]}, {
+     Rational[-11, 16], Rational[3, 2]}, {
+     Rational[-11, 16], Rational[25, 16]}, {
+     Rational[-11, 16], Rational[13, 8]}, {
+     Rational[-5, 8], Rational[13, 8]}, {
+     Rational[-11, 16], Rational[13, 8]}, {
+     Rational[-11, 16], Rational[27, 16]}, {
+     Rational[-11, 16], Rational[7, 4]}, {Rational[-5, 8], Rational[7, 4]}, {
+     Rational[-5, 8], Rational[29, 16]}, {
+     Rational[-9, 16], Rational[29, 16]}, {
+     Rational[-1, 2], Rational[29, 16]}, {Rational[-1, 2], Rational[7, 4]}, {
+     Rational[-9, 16], Rational[7, 4]}, {
+     Rational[-9, 16], Rational[29, 16]}, {
+     Rational[-9, 16], Rational[15, 8]}, {Rational[-1, 2], Rational[15, 8]}, {
+     Rational[-1, 2], Rational[31, 16]}, {
+     Rational[-7, 16], Rational[31, 16]}, {
+     Rational[-3, 8], Rational[31, 16]}, {Rational[-3, 8], Rational[15, 8]}, {
+     Rational[-3, 8], Rational[31, 16]}, {
+     Rational[-5, 16], Rational[31, 16]}, {
+     Rational[-1, 4], Rational[31, 16]}, {Rational[-1, 4], Rational[15, 8]}, {
+     Rational[-3, 16], Rational[15, 8]}, {
+     Rational[-3, 16], Rational[29, 16]}, {
+     Rational[-3, 16], Rational[7, 4]}, {Rational[-1, 4], Rational[7, 4]}, {
+     Rational[-5, 16], Rational[7, 4]}, {
+     Rational[-5, 16], Rational[29, 16]}, {
+     Rational[-5, 16], Rational[15, 8]}, {Rational[-1, 4], Rational[15, 8]}, {
+     Rational[-1, 4], Rational[31, 16]}, {
+     Rational[-3, 16], Rational[31, 16]}, {
+     Rational[-1, 8], Rational[31, 16]}, {Rational[-1, 8], Rational[15, 8]}, {
+     Rational[-1, 8], Rational[31, 16]}, {
+     Rational[-1, 16], Rational[31, 16]}, {0, Rational[31, 16]}, {
+     0, Rational[15, 8]}, {Rational[1, 16], Rational[15, 8]}, {
+     Rational[1, 16], Rational[29, 16]}, {Rational[1, 16], Rational[7, 4]}, {
+     0, Rational[7, 4]}, {0, Rational[29, 16]}, {
+     Rational[1, 16], Rational[29, 16]}, {Rational[1, 8], Rational[29, 16]}, {
+     Rational[1, 8], Rational[7, 4]}, {Rational[3, 16], Rational[7, 4]}, {
+     Rational[3, 16], Rational[27, 16]}, {Rational[3, 16], Rational[13, 8]}, {
+     Rational[1, 8], Rational[13, 8]}, {Rational[3, 16], Rational[13, 8]}, {
+     Rational[3, 16], Rational[25, 16]}, {Rational[3, 16], Rational[3, 2]}, {
+     Rational[1, 8], Rational[3, 2]}, {Rational[1, 8], Rational[23, 16]}, {
+     Rational[1, 16], Rational[23, 16]}, {0, Rational[23, 16]}, {
+     0, Rational[3, 2]}, {Rational[-1, 16], Rational[3, 2]}, {
+     Rational[-1, 16], Rational[25, 16]}, {
+     Rational[-1, 16], Rational[13, 8]}, {0, Rational[13, 8]}, {
+     0, Rational[27, 16]}, {Rational[1, 16], Rational[27, 16]}, {
+     Rational[1, 8], Rational[27, 16]}, {Rational[1, 8], Rational[13, 8]}, {
+     Rational[1, 8], Rational[27, 16]}, {Rational[3, 16], Rational[27, 16]}, {
+     Rational[1, 4], Rational[27, 16]}, {Rational[1, 4], Rational[13, 8]}, {
+     Rational[5, 16], Rational[13, 8]}, {Rational[5, 16], Rational[25, 16]}, {
+     Rational[5, 16], Rational[3, 2]}, {Rational[1, 4], Rational[3, 2]}, {
+     Rational[1, 4], Rational[25, 16]}, {Rational[5, 16], Rational[25, 16]}, {
+     Rational[3, 8], Rational[25, 16]}, {Rational[3, 8], Rational[3, 2]}, {
+     Rational[7, 16], Rational[3, 2]}, {Rational[7, 16], Rational[23, 16]}, {
+     Rational[7, 16], Rational[11, 8]}, {Rational[3, 8], Rational[11, 8]}, {
+     Rational[7, 16], Rational[11, 8]}, {Rational[7, 16], Rational[21, 16]}, {
+     Rational[7, 16], Rational[5, 4]}, {Rational[3, 8], Rational[5, 4]}, {
+     Rational[3, 8], Rational[19, 16]}, {Rational[5, 16], Rational[19, 16]}, {
+     Rational[1, 4], Rational[19, 16]}, {Rational[1, 4], Rational[5, 4]}, {
+     Rational[1, 4], Rational[21, 16]}, {Rational[5, 16], Rational[21, 16]}, {
+     Rational[3, 8], Rational[21, 16]}, {Rational[3, 8], Rational[5, 4]}, {
+     Rational[7, 16], Rational[5, 4]}, {Rational[7, 16], Rational[19, 16]}, {
+     Rational[7, 16], Rational[9, 8]}, {Rational[3, 8], Rational[9, 8]}, {
+     Rational[7, 16], Rational[9, 8]}, {Rational[7, 16], Rational[17, 16]}, {
+     Rational[7, 16], 1}, {Rational[3, 8], 1}, {
+     Rational[3, 8], Rational[15, 16]}, {Rational[5, 16], Rational[15, 16]}, {
+     Rational[1, 4], Rational[15, 16]}, {Rational[1, 4], 1}, {
+     Rational[5, 16], 1}, {Rational[5, 16], Rational[15, 16]}, {
+     Rational[5, 16], Rational[7, 8]}, {Rational[1, 4], Rational[7, 8]}, {
+     Rational[1, 4], Rational[13, 16]}, {Rational[3, 16], Rational[13, 16]}, {
+     Rational[1, 8], Rational[13, 16]}, {Rational[1, 8], Rational[7, 8]}, {
+     Rational[1, 8], Rational[13, 16]}, {Rational[1, 16], Rational[13, 16]}, {
+     0, Rational[13, 16]}, {0, Rational[7, 8]}, {
+     Rational[-1, 16], Rational[7, 8]}, {
+     Rational[-1, 16], Rational[15, 16]}, {Rational[-1, 16], 1}, {0, 1}, {
+     Rational[1, 16], 1}, {Rational[1, 16], Rational[15, 16]}, {
+     Rational[1, 16], Rational[7, 8]}, {0, Rational[7, 8]}, {
+     0, Rational[13, 16]}, {Rational[-1, 16], Rational[13, 16]}, {
+     Rational[-1, 8], Rational[13, 16]}, {Rational[-1, 8], Rational[7, 8]}, {
+     Rational[-1, 8], Rational[13, 16]}, {
+     Rational[-3, 16], Rational[13, 16]}, {
+     Rational[-1, 4], Rational[13, 16]}, {Rational[-1, 4], Rational[7, 8]}, {
+     Rational[-5, 16], Rational[7, 8]}, {
+     Rational[-5, 16], Rational[15, 16]}, {Rational[-5, 16], 1}, {
+     Rational[-1, 4], 1}, {Rational[-1, 4], Rational[15, 16]}, {
+     Rational[-5, 16], Rational[15, 16]}, {
+     Rational[-3, 8], Rational[15, 16]}, {Rational[-3, 8], 1}, {
+     Rational[-7, 16], 1}, {Rational[-7, 16], Rational[17, 16]}, {
+     Rational[-7, 16], Rational[9, 8]}, {Rational[-3, 8], Rational[9, 8]}, {
+     Rational[-7, 16], Rational[9, 8]}, {
+     Rational[-7, 16], Rational[19, 16]}, {
+     Rational[-7, 16], Rational[5, 4]}, {Rational[-3, 8], Rational[5, 4]}, {
+     Rational[-3, 8], Rational[21, 16]}, {
+     Rational[-5, 16], Rational[21, 16]}, {
+     Rational[-1, 4], Rational[21, 16]}, {Rational[-1, 4], Rational[5, 4]}, {
+     Rational[-1, 4], Rational[19, 16]}, {
+     Rational[-5, 16], Rational[19, 16]}, {
+     Rational[-3, 8], Rational[19, 16]}, {Rational[-3, 8], Rational[5, 4]}, {
+     Rational[-7, 16], Rational[5, 4]}, {
+     Rational[-7, 16], Rational[21, 16]}, {
+     Rational[-7, 16], Rational[11, 8]}, {Rational[-3, 8], Rational[11, 8]}, {
+     Rational[-7, 16], Rational[11, 8]}, {
+     Rational[-7, 16], Rational[23, 16]}, {
+     Rational[-7, 16], Rational[3, 2]}, {Rational[-3, 8], Rational[3, 2]}, {
+     Rational[-3, 8], Rational[25, 16]}, {
+     Rational[-5, 16], Rational[25, 16]}, {
+     Rational[-1, 4], Rational[25, 16]}, {Rational[-1, 4], Rational[3, 2]}, {
+     Rational[-5, 16], Rational[3, 2]}, {
+     Rational[-5, 16], Rational[25, 16]}, {
+     Rational[-5, 16], Rational[13, 8]}, {Rational[-1, 4], Rational[13, 8]}, {
+     Rational[-1, 4], Rational[27, 16]}, {
+     Rational[-3, 16], Rational[27, 16]}, {
+     Rational[-1, 8], Rational[27, 16]}, {Rational[-1, 8], Rational[13, 8]}, {
+     Rational[-1, 8], Rational[27, 16]}, {
+     Rational[-1, 16], Rational[27, 16]}, {0, Rational[27, 16]}, {
+     0, Rational[13, 8]}, {Rational[1, 16], Rational[13, 8]}, {
+     Rational[1, 16], Rational[25, 16]}, {Rational[1, 16], Rational[3, 2]}, {
+     0, Rational[3, 2]}, {0, Rational[23, 16]}, {
+     Rational[-1, 16], Rational[23, 16]}, {
+     Rational[-1, 8], Rational[23, 16]}, {Rational[-1, 8], Rational[3, 2]}, {
+     Rational[-3, 16], Rational[3, 2]}, {
+     Rational[-3, 16], Rational[25, 16]}, {
+     Rational[-3, 16], Rational[13, 8]}, {Rational[-1, 8], Rational[13, 8]}, {
+     Rational[-3, 16], Rational[13, 8]}, {
+     Rational[-3, 16], Rational[27, 16]}, {
+     Rational[-3, 16], Rational[7, 4]}, {Rational[-1, 8], Rational[7, 4]}, {
+     Rational[-1, 8], Rational[29, 16]}, {
+     Rational[-1, 16], Rational[29, 16]}, {0, Rational[29, 16]}, {
+     0, Rational[7, 4]}, {Rational[-1, 16], Rational[7, 4]}, {
+     Rational[-1, 16], Rational[29, 16]}, {
+     Rational[-1, 16], Rational[15, 8]}, {0, Rational[15, 8]}, {
+     0, Rational[31, 16]}, {Rational[1, 16], Rational[31, 16]}, {
+     Rational[1, 8], Rational[31, 16]}, {Rational[1, 8], Rational[15, 8]}, {
+     Rational[1, 8], Rational[31, 16]}, {Rational[3, 16], Rational[31, 16]}, {
+     Rational[1, 4], Rational[31, 16]}, {Rational[1, 4], Rational[15, 8]}, {
+     Rational[5, 16], Rational[15, 8]}, {Rational[5, 16], Rational[29, 16]}, {
+     Rational[5, 16], Rational[7, 4]}, {Rational[1, 4], Rational[7, 4]}, {
+     Rational[3, 16], Rational[7, 4]}, {Rational[3, 16], Rational[29, 16]}, {
+     Rational[3, 16], Rational[15, 8]}, {Rational[1, 4], Rational[15, 8]}, {
+     Rational[1, 4], Rational[31, 16]}, {Rational[5, 16], Rational[31, 16]}, {
+     Rational[3, 8], Rational[31, 16]}, {Rational[3, 8], Rational[15, 8]}, {
+     Rational[3, 8], Rational[31, 16]}, {Rational[7, 16], Rational[31, 16]}, {
+     Rational[1, 2], Rational[31, 16]}, {Rational[1, 2], Rational[15, 8]}, {
+     Rational[9, 16], Rational[15, 8]}, {Rational[9, 16], Rational[29, 16]}, {
+     Rational[9, 16], Rational[7, 4]}, {Rational[1, 2], Rational[7, 4]}, {
+     Rational[1, 2], Rational[29, 16]}, {Rational[9, 16], Rational[29, 16]}, {
+     Rational[5, 8], Rational[29, 16]}, {Rational[5, 8], Rational[7, 4]}, {
+     Rational[11, 16], Rational[7, 4]}, {
+     Rational[11, 16], Rational[27, 16]}, {
+     Rational[11, 16], Rational[13, 8]}, {Rational[5, 8], Rational[13, 8]}, {
+     Rational[11, 16], Rational[13, 8]}, {
+     Rational[11, 16], Rational[25, 16]}, {
+     Rational[11, 16], Rational[3, 2]}, {Rational[5, 8], Rational[3, 2]}, {
+     Rational[5, 8], Rational[23, 16]}, {Rational[9, 16], Rational[23, 16]}, {
+     Rational[1, 2], Rational[23, 16]}, {Rational[1, 2], Rational[3, 2]}, {
+     Rational[1, 2], Rational[23, 16]}, {Rational[7, 16], Rational[23, 16]}, {
+     Rational[3, 8], Rational[23, 16]}, {Rational[3, 8], Rational[3, 2]}, {
+     Rational[5, 16], Rational[3, 2]}, {Rational[5, 16], Rational[25, 16]}, {
+     Rational[5, 16], Rational[13, 8]}, {Rational[3, 8], Rational[13, 8]}, {
+     Rational[5, 16], Rational[13, 8]}, {Rational[5, 16], Rational[27, 16]}, {
+     Rational[5, 16], Rational[7, 4]}, {Rational[3, 8], Rational[7, 4]}, {
+     Rational[3, 8], Rational[29, 16]}, {Rational[7, 16], Rational[29, 16]}, {
+     Rational[1, 2], Rational[29, 16]}, {Rational[1, 2], Rational[7, 4]}, {
+     Rational[7, 16], Rational[7, 4]}, {Rational[7, 16], Rational[29, 16]}, {
+     Rational[7, 16], Rational[15, 8]}, {Rational[1, 2], Rational[15, 8]}, {
+     Rational[1, 2], Rational[31, 16]}, {Rational[9, 16], Rational[31, 16]}, {
+     Rational[5, 8], Rational[31, 16]}, {Rational[5, 8], Rational[15, 8]}, {
+     Rational[5, 8], Rational[31, 16]}, {
+     Rational[11, 16], Rational[31, 16]}, {
+     Rational[3, 4], Rational[31, 16]}, {Rational[3, 4], Rational[15, 8]}, {
+     Rational[13, 16], Rational[15, 8]}, {
+     Rational[13, 16], Rational[29, 16]}, {
+     Rational[13, 16], Rational[7, 4]}, {Rational[3, 4], Rational[7, 4]}, {
+     Rational[11, 16], Rational[7, 4]}, {
+     Rational[11, 16], Rational[29, 16]}, {
+     Rational[11, 16], Rational[15, 8]}, {Rational[3, 4], Rational[15, 8]}, {
+     Rational[3, 4], Rational[31, 16]}, {
+     Rational[13, 16], Rational[31, 16]}, {
+     Rational[7, 8], Rational[31, 16]}, {Rational[7, 8], Rational[15, 8]}, {
+     Rational[7, 8], Rational[31, 16]}, {
+     Rational[15, 16], Rational[31, 16]}, {1, Rational[31, 16]}, {
+     1, Rational[15, 8]}, {Rational[17, 16], Rational[15, 8]}, {
+     Rational[17, 16], Rational[29, 16]}, {
+     Rational[17, 16], Rational[7, 4]}, {1, Rational[7, 4]}, {
+     1, Rational[29, 16]}, {Rational[17, 16], Rational[29, 16]}, {
+     Rational[9, 8], Rational[29, 16]}, {Rational[9, 8], Rational[7, 4]}, {
+     Rational[19, 16], Rational[7, 4]}, {
+     Rational[19, 16], Rational[27, 16]}, {
+     Rational[19, 16], Rational[13, 8]}, {Rational[9, 8], Rational[13, 8]}, {
+     Rational[19, 16], Rational[13, 8]}, {
+     Rational[19, 16], Rational[25, 16]}, {
+     Rational[19, 16], Rational[3, 2]}, {Rational[9, 8], Rational[3, 2]}, {
+     Rational[9, 8], Rational[23, 16]}, {
+     Rational[17, 16], Rational[23, 16]}, {1, Rational[23, 16]}, {
+     1, Rational[3, 2]}, {Rational[15, 16], Rational[3, 2]}, {
+     Rational[15, 16], Rational[25, 16]}, {
+     Rational[15, 16], Rational[13, 8]}, {1, Rational[13, 8]}, {
+     1, Rational[27, 16]}, {Rational[17, 16], Rational[27, 16]}, {
+     Rational[9, 8], Rational[27, 16]}, {Rational[9, 8], Rational[13, 8]}, {
+     Rational[9, 8], Rational[27, 16]}, {
+     Rational[19, 16], Rational[27, 16]}, {
+     Rational[5, 4], Rational[27, 16]}, {Rational[5, 4], Rational[13, 8]}, {
+     Rational[21, 16], Rational[13, 8]}, {
+     Rational[21, 16], Rational[25, 16]}, {
+     Rational[21, 16], Rational[3, 2]}, {Rational[5, 4], Rational[3, 2]}, {
+     Rational[5, 4], Rational[25, 16]}, {
+     Rational[21, 16], Rational[25, 16]}, {
+     Rational[11, 8], Rational[25, 16]}, {Rational[11, 8], Rational[3, 2]}, {
+     Rational[23, 16], Rational[3, 2]}, {
+     Rational[23, 16], Rational[23, 16]}, {
+     Rational[23, 16], Rational[11, 8]}, {Rational[11, 8], Rational[11, 8]}, {
+     Rational[23, 16], Rational[11, 8]}, {
+     Rational[23, 16], Rational[21, 16]}, {
+     Rational[23, 16], Rational[5, 4]}, {Rational[11, 8], Rational[5, 4]}, {
+     Rational[11, 8], Rational[19, 16]}, {
+     Rational[21, 16], Rational[19, 16]}, {
+     Rational[5, 4], Rational[19, 16]}, {Rational[5, 4], Rational[5, 4]}, {
+     Rational[5, 4], Rational[21, 16]}, {
+     Rational[21, 16], Rational[21, 16]}, {
+     Rational[11, 8], Rational[21, 16]}, {Rational[11, 8], Rational[5, 4]}, {
+     Rational[23, 16], Rational[5, 4]}, {
+     Rational[23, 16], Rational[19, 16]}, {
+     Rational[23, 16], Rational[9, 8]}, {Rational[11, 8], Rational[9, 8]}, {
+     Rational[23, 16], Rational[9, 8]}, {
+     Rational[23, 16], Rational[17, 16]}, {Rational[23, 16], 1}, {
+     Rational[11, 8], 1}, {Rational[11, 8], Rational[15, 16]}, {
+     Rational[21, 16], Rational[15, 16]}, {
+     Rational[5, 4], Rational[15, 16]}, {Rational[5, 4], 1}, {
+     Rational[21, 16], 1}, {Rational[21, 16], Rational[15, 16]}, {
+     Rational[21, 16], Rational[7, 8]}, {Rational[5, 4], Rational[7, 8]}, {
+     Rational[5, 4], Rational[13, 16]}, {
+     Rational[19, 16], Rational[13, 16]}, {
+     Rational[9, 8], Rational[13, 16]}, {Rational[9, 8], Rational[7, 8]}, {
+     Rational[9, 8], Rational[13, 16]}, {
+     Rational[17, 16], Rational[13, 16]}, {1, Rational[13, 16]}, {
+     1, Rational[7, 8]}, {Rational[15, 16], Rational[7, 8]}, {
+     Rational[15, 16], Rational[15, 16]}, {Rational[15, 16], 1}, {1, 1}, {
+     1, Rational[15, 16]}, {Rational[15, 16], Rational[15, 16]}, {
+     Rational[7, 8], Rational[15, 16]}, {Rational[7, 8], 1}, {
+     Rational[13, 16], 1}, {Rational[13, 16], Rational[17, 16]}, {
+     Rational[13, 16], Rational[9, 8]}, {Rational[7, 8], Rational[9, 8]}, {
+     Rational[13, 16], Rational[9, 8]}, {
+     Rational[13, 16], Rational[19, 16]}, {
+     Rational[13, 16], Rational[5, 4]}, {Rational[7, 8], Rational[5, 4]}, {
+     Rational[7, 8], Rational[21, 16]}, {
+     Rational[15, 16], Rational[21, 16]}, {1, Rational[21, 16]}, {
+     1, Rational[5, 4]}, {Rational[15, 16], Rational[5, 4]}, {
+     Rational[15, 16], Rational[21, 16]}, {
+     Rational[15, 16], Rational[11, 8]}, {1, Rational[11, 8]}, {
+     1, Rational[23, 16]}, {Rational[17, 16], Rational[23, 16]}, {
+     Rational[9, 8], Rational[23, 16]}, {Rational[9, 8], Rational[11, 8]}, {
+     Rational[9, 8], Rational[23, 16]}, {
+     Rational[19, 16], Rational[23, 16]}, {
+     Rational[5, 4], Rational[23, 16]}, {Rational[5, 4], Rational[11, 8]}, {
+     Rational[21, 16], Rational[11, 8]}, {
+     Rational[21, 16], Rational[21, 16]}, {
+     Rational[21, 16], Rational[5, 4]}, {Rational[5, 4], Rational[5, 4]}, {
+     Rational[19, 16], Rational[5, 4]}, {
+     Rational[19, 16], Rational[21, 16]}, {
+     Rational[19, 16], Rational[11, 8]}, {Rational[5, 4], Rational[11, 8]}, {
+     Rational[5, 4], Rational[23, 16]}, {
+     Rational[21, 16], Rational[23, 16]}, {
+     Rational[11, 8], Rational[23, 16]}, {Rational[11, 8], Rational[11, 8]}, {
+     Rational[11, 8], Rational[23, 16]}, {
+     Rational[23, 16], Rational[23, 16]}, {
+     Rational[3, 2], Rational[23, 16]}, {Rational[3, 2], Rational[11, 8]}, {
+     Rational[25, 16], Rational[11, 8]}, {
+     Rational[25, 16], Rational[21, 16]}, {
+     Rational[25, 16], Rational[5, 4]}, {Rational[3, 2], Rational[5, 4]}, {
+     Rational[3, 2], Rational[21, 16]}, {
+     Rational[25, 16], Rational[21, 16]}, {
+     Rational[13, 8], Rational[21, 16]}, {Rational[13, 8], Rational[5, 4]}, {
+     Rational[27, 16], Rational[5, 4]}, {
+     Rational[27, 16], Rational[19, 16]}, {
+     Rational[27, 16], Rational[9, 8]}, {Rational[13, 8], Rational[9, 8]}, {
+     Rational[27, 16], Rational[9, 8]}, {
+     Rational[27, 16], Rational[17, 16]}, {Rational[27, 16], 1}, {
+     Rational[13, 8], 1}, {Rational[13, 8], Rational[15, 16]}, {
+     Rational[25, 16], Rational[15, 16]}, {
+     Rational[3, 2], Rational[15, 16]}, {Rational[3, 2], 1}, {
+     Rational[23, 16], 1}, {Rational[23, 16], Rational[17, 16]}, {
+     Rational[23, 16], Rational[9, 8]}, {Rational[3, 2], Rational[9, 8]}, {
+     Rational[3, 2], Rational[19, 16]}, {
+     Rational[25, 16], Rational[19, 16]}, {
+     Rational[13, 8], Rational[19, 16]}, {Rational[13, 8], Rational[9, 8]}, {
+     Rational[13, 8], Rational[19, 16]}, {
+     Rational[27, 16], Rational[19, 16]}, {
+     Rational[7, 4], Rational[19, 16]}, {Rational[7, 4], Rational[9, 8]}, {
+     Rational[29, 16], Rational[9, 8]}, {
+     Rational[29, 16], Rational[17, 16]}, {Rational[29, 16], 1}, {
+     Rational[7, 4], 1}, {Rational[7, 4], Rational[17, 16]}, {
+     Rational[29, 16], Rational[17, 16]}, {
+     Rational[15, 8], Rational[17, 16]}, {Rational[15, 8], 1}, {
+     Rational[31, 16], 1}, {Rational[31, 16], Rational[15, 16]}, {
+     Rational[31, 16], Rational[7, 8]}, {Rational[15, 8], Rational[7, 8]}, {
+     Rational[31, 16], Rational[7, 8]}, {
+     Rational[31, 16], Rational[13, 16]}, {
+     Rational[31, 16], Rational[3, 4]}, {Rational[15, 8], Rational[3, 4]}, {
+     Rational[15, 8], Rational[11, 16]}, {
+     Rational[29, 16], Rational[11, 16]}, {
+     Rational[7, 4], Rational[11, 16]}, {Rational[7, 4], Rational[3, 4]}, {
+     Rational[7, 4], Rational[13, 16]}, {
+     Rational[29, 16], Rational[13, 16]}, {
+     Rational[15, 8], Rational[13, 16]}, {Rational[15, 8], Rational[3, 4]}, {
+     Rational[31, 16], Rational[3, 4]}, {
+     Rational[31, 16], Rational[11, 16]}, {
+     Rational[31, 16], Rational[5, 8]}, {Rational[15, 8], Rational[5, 8]}, {
+     Rational[31, 16], Rational[5, 8]}, {Rational[31, 16], Rational[9, 16]}, {
+     Rational[31, 16], Rational[1, 2]}, {Rational[15, 8], Rational[1, 2]}, {
+     Rational[15, 8], Rational[7, 16]}, {Rational[29, 16], Rational[7, 16]}, {
+     Rational[7, 4], Rational[7, 16]}, {Rational[7, 4], Rational[1, 2]}, {
+     Rational[29, 16], Rational[1, 2]}, {Rational[29, 16], Rational[7, 16]}, {
+     Rational[29, 16], Rational[3, 8]}, {Rational[7, 4], Rational[3, 8]}, {
+     Rational[7, 4], Rational[5, 16]}, {Rational[27, 16], Rational[5, 16]}, {
+     Rational[13, 8], Rational[5, 16]}, {Rational[13, 8], Rational[3, 8]}, {
+     Rational[13, 8], Rational[5, 16]}, {Rational[25, 16], Rational[5, 16]}, {
+     Rational[3, 2], Rational[5, 16]}, {Rational[3, 2], Rational[3, 8]}, {
+     Rational[23, 16], Rational[3, 8]}, {Rational[23, 16], Rational[7, 16]}, {
+     Rational[23, 16], Rational[1, 2]}, {Rational[3, 2], Rational[1, 2]}, {
+     Rational[23, 16], Rational[1, 2]}, {Rational[23, 16], Rational[9, 16]}, {
+     Rational[23, 16], Rational[5, 8]}, {Rational[3, 2], Rational[5, 8]}, {
+     Rational[3, 2], Rational[11, 16]}, {
+     Rational[25, 16], Rational[11, 16]}, {
+     Rational[13, 8], Rational[11, 16]}, {Rational[13, 8], Rational[5, 8]}, {
+     Rational[13, 8], Rational[11, 16]}, {
+     Rational[27, 16], Rational[11, 16]}, {
+     Rational[7, 4], Rational[11, 16]}, {Rational[7, 4], Rational[5, 8]}, {
+     Rational[29, 16], Rational[5, 8]}, {Rational[29, 16], Rational[9, 16]}, {
+     Rational[29, 16], Rational[1, 2]}, {Rational[7, 4], Rational[1, 2]}, {
+     Rational[7, 4], Rational[9, 16]}, {Rational[29, 16], Rational[9, 16]}, {
+     Rational[15, 8], Rational[9, 16]}, {Rational[15, 8], Rational[1, 2]}, {
+     Rational[31, 16], Rational[1, 2]}, {Rational[31, 16], Rational[7, 16]}, {
+     Rational[31, 16], Rational[3, 8]}, {Rational[15, 8], Rational[3, 8]}, {
+     Rational[31, 16], Rational[3, 8]}, {Rational[31, 16], Rational[5, 16]}, {
+     Rational[31, 16], Rational[1, 4]}, {Rational[15, 8], Rational[1, 4]}, {
+     Rational[15, 8], Rational[3, 16]}, {Rational[29, 16], Rational[3, 16]}, {
+     Rational[7, 4], Rational[3, 16]}, {Rational[7, 4], Rational[1, 4]}, {
+     Rational[7, 4], Rational[5, 16]}, {Rational[29, 16], Rational[5, 16]}, {
+     Rational[15, 8], Rational[5, 16]}, {Rational[15, 8], Rational[1, 4]}, {
+     Rational[31, 16], Rational[1, 4]}, {Rational[31, 16], Rational[3, 16]}, {
+     Rational[31, 16], Rational[1, 8]}, {Rational[15, 8], Rational[1, 8]}, {
+     Rational[31, 16], Rational[1, 8]}, {Rational[31, 16], Rational[1, 16]}, {
+     Rational[31, 16], 0}, {Rational[15, 8], 0}, {
+     Rational[15, 8], Rational[-1, 16]}, {
+     Rational[29, 16], Rational[-1, 16]}, {
+     Rational[7, 4], Rational[-1, 16]}, {Rational[7, 4], 0}, {
+     Rational[29, 16], 0}, {Rational[29, 16], Rational[-1, 16]}, {
+     Rational[29, 16], Rational[-1, 8]}, {Rational[7, 4], Rational[-1, 8]}, {
+     Rational[7, 4], Rational[-3, 16]}, {
+     Rational[27, 16], Rational[-3, 16]}, {
+     Rational[13, 8], Rational[-3, 16]}, {Rational[13, 8], Rational[-1, 8]}, {
+     Rational[13, 8], Rational[-3, 16]}, {
+     Rational[25, 16], Rational[-3, 16]}, {
+     Rational[3, 2], Rational[-3, 16]}, {Rational[3, 2], Rational[-1, 8]}, {
+     Rational[23, 16], Rational[-1, 8]}, {
+     Rational[23, 16], Rational[-1, 16]}, {Rational[23, 16], 0}, {
+     Rational[3, 2], 0}, {Rational[3, 2], Rational[1, 16]}, {
+     Rational[25, 16], Rational[1, 16]}, {Rational[13, 8], Rational[1, 16]}, {
+     Rational[13, 8], 0}, {Rational[27, 16], 0}, {
+     Rational[27, 16], Rational[-1, 16]}, {
+     Rational[27, 16], Rational[-1, 8]}, {Rational[13, 8], Rational[-1, 8]}, {
+     Rational[27, 16], Rational[-1, 8]}, {
+     Rational[27, 16], Rational[-3, 16]}, {
+     Rational[27, 16], Rational[-1, 4]}, {Rational[13, 8], Rational[-1, 4]}, {
+     Rational[13, 8], Rational[-5, 16]}, {
+     Rational[25, 16], Rational[-5, 16]}, {
+     Rational[3, 2], Rational[-5, 16]}, {Rational[3, 2], Rational[-1, 4]}, {
+     Rational[25, 16], Rational[-1, 4]}, {
+     Rational[25, 16], Rational[-5, 16]}, {
+     Rational[25, 16], Rational[-3, 8]}, {Rational[3, 2], Rational[-3, 8]}, {
+     Rational[3, 2], Rational[-7, 16]}, {
+     Rational[23, 16], Rational[-7, 16]}, {
+     Rational[11, 8], Rational[-7, 16]}, {Rational[11, 8], Rational[-3, 8]}, {
+     Rational[11, 8], Rational[-7, 16]}, {
+     Rational[21, 16], Rational[-7, 16]}, {
+     Rational[5, 4], Rational[-7, 16]}, {Rational[5, 4], Rational[-3, 8]}, {
+     Rational[19, 16], Rational[-3, 8]}, {
+     Rational[19, 16], Rational[-5, 16]}, {
+     Rational[19, 16], Rational[-1, 4]}, {Rational[5, 4], Rational[-1, 4]}, {
+     Rational[21, 16], Rational[-1, 4]}, {
+     Rational[21, 16], Rational[-5, 16]}, {
+     Rational[21, 16], Rational[-3, 8]}, {Rational[5, 4], Rational[-3, 8]}, {
+     Rational[5, 4], Rational[-7, 16]}, {
+     Rational[19, 16], Rational[-7, 16]}, {
+     Rational[9, 8], Rational[-7, 16]}, {Rational[9, 8], Rational[-3, 8]}, {
+     Rational[9, 8], Rational[-7, 16]}, {
+     Rational[17, 16], Rational[-7, 16]}, {1, Rational[-7, 16]}, {
+     1, Rational[-3, 8]}, {Rational[15, 16], Rational[-3, 8]}, {
+     Rational[15, 16], Rational[-5, 16]}, {
+     Rational[15, 16], Rational[-1, 4]}, {1, Rational[-1, 4]}, {
+     1, Rational[-5, 16]}, {Rational[15, 16], Rational[-5, 16]}, {
+     Rational[7, 8], Rational[-5, 16]}, {Rational[7, 8], Rational[-1, 4]}, {
+     Rational[13, 16], Rational[-1, 4]}, {
+     Rational[13, 16], Rational[-3, 16]}, {
+     Rational[13, 16], Rational[-1, 8]}, {Rational[7, 8], Rational[-1, 8]}, {
+     Rational[13, 16], Rational[-1, 8]}, {
+     Rational[13, 16], Rational[-1, 16]}, {Rational[13, 16], 0}, {
+     Rational[7, 8], 0}, {Rational[7, 8], Rational[1, 16]}, {
+     Rational[15, 16], Rational[1, 16]}, {1, Rational[1, 16]}, {1, 0}}, {{-1, 
+     0}, {-1, 0.0625}, {-0.9375, 0.0625}, {-0.875, 
+     0.0625}, {-0.875, 0}, {-0.8125, 
+      0}, {-0.8125, -0.0625}, {-0.8125, -0.125}, {-0.875, -0.125}, {-0.8125, \
+-0.125}, {-0.8125, -0.1875}, {-0.8125, -0.25}, {-0.875, -0.25}, {-0.875, \
+-0.3125}, {-0.9375, -0.3125}, {-1, -0.3125}, {-1, -0.25}, {-0.9375, -0.25}, \
+{-0.9375, -0.3125}, {-0.9375, -0.375}, {-1, -0.375}, {-1, -0.4375}, {-1.0625, \
+-0.4375}, {-1.125, -0.4375}, {-1.125, -0.375}, {-1.125, -0.4375}, {-1.1875, \
+-0.4375}, {-1.25, -0.4375}, {-1.25, -0.375}, {-1.3125, -0.375}, {-1.3125, \
+-0.3125}, {-1.3125, -0.25}, {-1.25, -0.25}, {-1.1875, -0.25}, {-1.1875, \
+-0.3125}, {-1.1875, -0.375}, {-1.25, -0.375}, {-1.25, -0.4375}, {-1.3125, \
+-0.4375}, {-1.375, -0.4375}, {-1.375, -0.375}, {-1.375, -0.4375}, {-1.4375, \
+-0.4375}, {-1.5, -0.4375}, {-1.5, -0.375}, {-1.5625, -0.375}, {-1.5625, \
+-0.3125}, {-1.5625, -0.25}, {-1.5, -0.25}, {-1.5, -0.3125}, {-1.5625, \
+-0.3125}, {-1.625, -0.3125}, {-1.625, -0.25}, {-1.6875, -0.25}, {-1.6875, \
+-0.1875}, {-1.6875, -0.125}, {-1.625, -0.125}, {-1.6875, -0.125}, {-1.6875, \
+-0.0625}, {-1.6875, 0}, {-1.625, 0}, {-1.625, 0.0625}, {-1.5625, 
+     0.0625}, {-1.5, 
+     0.0625}, {-1.5, 0}, {-1.4375, 
+      0}, {-1.4375, -0.0625}, {-1.4375, -0.125}, {-1.5, -0.125}, {-1.5, \
+-0.1875}, {-1.5625, -0.1875}, {-1.625, -0.1875}, {-1.625, -0.125}, {-1.625, \
+-0.1875}, {-1.6875, -0.1875}, {-1.75, -0.1875}, {-1.75, -0.125}, {-1.8125, \
+-0.125}, {-1.8125, -0.0625}, {-1.8125, 0}, {-1.75, 
+      0}, {-1.75, -0.0625}, {-1.8125, -0.0625}, {-1.875, -0.0625}, {-1.875, 
+      0}, {-1.9375, 0}, {-1.9375, 0.0625}, {-1.9375, 0.125}, {-1.875, 
+     0.125}, {-1.9375, 0.125}, {-1.9375, 0.1875}, {-1.9375, 0.25}, {-1.875, 
+     0.25}, {-1.875, 0.3125}, {-1.8125, 0.3125}, {-1.75, 0.3125}, {-1.75, 
+     0.25}, {-1.75, 0.1875}, {-1.8125, 0.1875}, {-1.875, 0.1875}, {-1.875, 
+     0.25}, {-1.9375, 0.25}, {-1.9375, 0.3125}, {-1.9375, 0.375}, {-1.875, 
+     0.375}, {-1.9375, 0.375}, {-1.9375, 0.4375}, {-1.9375, 0.5}, {-1.875, 
+     0.5}, {-1.875, 0.5625}, {-1.8125, 0.5625}, {-1.75, 0.5625}, {-1.75, 
+     0.5}, {-1.8125, 0.5}, {-1.8125, 0.5625}, {-1.8125, 0.625}, {-1.75, 
+     0.625}, {-1.75, 0.6875}, {-1.6875, 0.6875}, {-1.625, 0.6875}, {-1.625, 
+     0.625}, {-1.625, 0.6875}, {-1.5625, 0.6875}, {-1.5, 0.6875}, {-1.5, 
+     0.625}, {-1.4375, 0.625}, {-1.4375, 0.5625}, {-1.4375, 0.5}, {-1.5, 
+     0.5}, {-1.4375, 0.5}, {-1.4375, 0.4375}, {-1.4375, 0.375}, {-1.5, 
+     0.375}, {-1.5, 0.3125}, {-1.5625, 0.3125}, {-1.625, 0.3125}, {-1.625, 
+     0.375}, {-1.625, 0.3125}, {-1.6875, 0.3125}, {-1.75, 0.3125}, {-1.75, 
+     0.375}, {-1.8125, 0.375}, {-1.8125, 0.4375}, {-1.8125, 0.5}, {-1.75, 
+     0.5}, {-1.75, 0.4375}, {-1.8125, 0.4375}, {-1.875, 0.4375}, {-1.875, 
+     0.5}, {-1.9375, 0.5}, {-1.9375, 0.5625}, {-1.9375, 0.625}, {-1.875, 
+     0.625}, {-1.9375, 0.625}, {-1.9375, 0.6875}, {-1.9375, 0.75}, {-1.875, 
+     0.75}, {-1.875, 0.8125}, {-1.8125, 0.8125}, {-1.75, 0.8125}, {-1.75, 
+     0.75}, {-1.75, 0.6875}, {-1.8125, 0.6875}, {-1.875, 0.6875}, {-1.875, 
+     0.75}, {-1.9375, 0.75}, {-1.9375, 0.8125}, {-1.9375, 0.875}, {-1.875, 
+     0.875}, {-1.9375, 0.875}, {-1.9375, 
+     0.9375}, {-1.9375, 1}, {-1.875, 1}, {-1.875, 1.0625}, {-1.8125, 
+     1.0625}, {-1.75, 1.0625}, {-1.75, 1}, {-1.8125, 1}, {-1.8125, 
+     1.0625}, {-1.8125, 1.125}, {-1.75, 1.125}, {-1.75, 1.1875}, {-1.6875, 
+     1.1875}, {-1.625, 1.1875}, {-1.625, 1.125}, {-1.625, 1.1875}, {-1.5625, 
+     1.1875}, {-1.5, 1.1875}, {-1.5, 1.125}, {-1.4375, 1.125}, {-1.4375, 
+     1.0625}, {-1.4375, 1}, {-1.5, 1}, {-1.5, 0.9375}, {-1.5625, 
+     0.9375}, {-1.625, 0.9375}, {-1.625, 1}, {-1.6875, 1}, {-1.6875, 
+     1.0625}, {-1.6875, 1.125}, {-1.625, 1.125}, {-1.6875, 1.125}, {-1.6875, 
+     1.1875}, {-1.6875, 1.25}, {-1.625, 1.25}, {-1.625, 1.3125}, {-1.5625, 
+     1.3125}, {-1.5, 1.3125}, {-1.5, 1.25}, {-1.5625, 1.25}, {-1.5625, 
+     1.3125}, {-1.5625, 1.375}, {-1.5, 1.375}, {-1.5, 1.4375}, {-1.4375, 
+     1.4375}, {-1.375, 1.4375}, {-1.375, 1.375}, {-1.375, 1.4375}, {-1.3125, 
+     1.4375}, {-1.25, 1.4375}, {-1.25, 1.375}, {-1.1875, 1.375}, {-1.1875, 
+     1.3125}, {-1.1875, 1.25}, {-1.25, 1.25}, {-1.3125, 1.25}, {-1.3125, 
+     1.3125}, {-1.3125, 1.375}, {-1.25, 1.375}, {-1.25, 1.4375}, {-1.1875, 
+     1.4375}, {-1.125, 1.4375}, {-1.125, 1.375}, {-1.125, 1.4375}, {-1.0625, 
+     1.4375}, {-1, 1.4375}, {-1, 1.375}, {-0.9375, 1.375}, {-0.9375, 
+     1.3125}, {-0.9375, 1.25}, {-1, 1.25}, {-1, 1.3125}, {-0.9375, 
+     1.3125}, {-0.875, 1.3125}, {-0.875, 1.25}, {-0.8125, 1.25}, {-0.8125, 
+     1.1875}, {-0.8125, 1.125}, {-0.875, 1.125}, {-0.8125, 1.125}, {-0.8125, 
+     1.0625}, {-0.8125, 1}, {-0.875, 1}, {-0.875, 0.9375}, {-0.9375, 
+     0.9375}, {-1, 0.9375}, {-1, 1}, {-0.9375, 1}, {-0.9375, 
+     0.9375}, {-0.9375, 0.875}, {-1, 0.875}, {-1, 0.8125}, {-1.0625, 
+     0.8125}, {-1.125, 0.8125}, {-1.125, 0.875}, {-1.125, 0.8125}, {-1.1875, 
+     0.8125}, {-1.25, 0.8125}, {-1.25, 0.875}, {-1.3125, 0.875}, {-1.3125, 
+     0.9375}, {-1.3125, 1}, {-1.25, 1}, {-1.25, 0.9375}, {-1.3125, 
+     0.9375}, {-1.375, 0.9375}, {-1.375, 1}, {-1.4375, 1}, {-1.4375, 
+     1.0625}, {-1.4375, 1.125}, {-1.375, 1.125}, {-1.4375, 1.125}, {-1.4375, 
+     1.1875}, {-1.4375, 1.25}, {-1.375, 1.25}, {-1.375, 1.3125}, {-1.3125, 
+     1.3125}, {-1.25, 1.3125}, {-1.25, 1.25}, {-1.25, 1.1875}, {-1.3125, 
+     1.1875}, {-1.375, 1.1875}, {-1.375, 1.25}, {-1.4375, 1.25}, {-1.4375, 
+     1.3125}, {-1.4375, 1.375}, {-1.375, 1.375}, {-1.4375, 1.375}, {-1.4375, 
+     1.4375}, {-1.4375, 1.5}, {-1.375, 1.5}, {-1.375, 1.5625}, {-1.3125, 
+     1.5625}, {-1.25, 1.5625}, {-1.25, 1.5}, {-1.3125, 1.5}, {-1.3125, 
+     1.5625}, {-1.3125, 1.625}, {-1.25, 1.625}, {-1.25, 1.6875}, {-1.1875, 
+     1.6875}, {-1.125, 1.6875}, {-1.125, 1.625}, {-1.125, 1.6875}, {-1.0625, 
+     1.6875}, {-1, 1.6875}, {-1, 1.625}, {-0.9375, 1.625}, {-0.9375, 
+     1.5625}, {-0.9375, 1.5}, {-1, 1.5}, {-1, 1.4375}, {-1.0625, 
+     1.4375}, {-1.125, 1.4375}, {-1.125, 1.5}, {-1.1875, 1.5}, {-1.1875, 
+     1.5625}, {-1.1875, 1.625}, {-1.125, 1.625}, {-1.1875, 1.625}, {-1.1875, 
+     1.6875}, {-1.1875, 1.75}, {-1.125, 1.75}, {-1.125, 1.8125}, {-1.0625, 
+     1.8125}, {-1, 1.8125}, {-1, 1.75}, {-1.0625, 1.75}, {-1.0625, 
+     1.8125}, {-1.0625, 1.875}, {-1, 1.875}, {-1, 1.9375}, {-0.9375, 
+     1.9375}, {-0.875, 1.9375}, {-0.875, 1.875}, {-0.875, 1.9375}, {-0.8125, 
+     1.9375}, {-0.75, 1.9375}, {-0.75, 1.875}, {-0.6875, 1.875}, {-0.6875, 
+     1.8125}, {-0.6875, 1.75}, {-0.75, 1.75}, {-0.8125, 1.75}, {-0.8125, 
+     1.8125}, {-0.8125, 1.875}, {-0.75, 1.875}, {-0.75, 1.9375}, {-0.6875, 
+     1.9375}, {-0.625, 1.9375}, {-0.625, 1.875}, {-0.625, 1.9375}, {-0.5625, 
+     1.9375}, {-0.5, 1.9375}, {-0.5, 1.875}, {-0.4375, 1.875}, {-0.4375, 
+     1.8125}, {-0.4375, 1.75}, {-0.5, 1.75}, {-0.5, 1.8125}, {-0.4375, 
+     1.8125}, {-0.375, 1.8125}, {-0.375, 1.75}, {-0.3125, 1.75}, {-0.3125, 
+     1.6875}, {-0.3125, 1.625}, {-0.375, 1.625}, {-0.3125, 1.625}, {-0.3125, 
+     1.5625}, {-0.3125, 1.5}, {-0.375, 1.5}, {-0.375, 1.4375}, {-0.4375, 
+     1.4375}, {-0.5, 1.4375}, {-0.5, 1.5}, {-0.5, 1.4375}, {-0.5625, 
+     1.4375}, {-0.625, 1.4375}, {-0.625, 1.5}, {-0.6875, 1.5}, {-0.6875, 
+     1.5625}, {-0.6875, 1.625}, {-0.625, 1.625}, {-0.6875, 1.625}, {-0.6875, 
+     1.6875}, {-0.6875, 1.75}, {-0.625, 1.75}, {-0.625, 1.8125}, {-0.5625, 
+     1.8125}, {-0.5, 1.8125}, {-0.5, 1.75}, {-0.5625, 1.75}, {-0.5625, 
+     1.8125}, {-0.5625, 1.875}, {-0.5, 1.875}, {-0.5, 1.9375}, {-0.4375, 
+     1.9375}, {-0.375, 1.9375}, {-0.375, 1.875}, {-0.375, 1.9375}, {-0.3125, 
+     1.9375}, {-0.25, 1.9375}, {-0.25, 1.875}, {-0.1875, 1.875}, {-0.1875, 
+     1.8125}, {-0.1875, 1.75}, {-0.25, 1.75}, {-0.3125, 1.75}, {-0.3125, 
+     1.8125}, {-0.3125, 1.875}, {-0.25, 1.875}, {-0.25, 1.9375}, {-0.1875, 
+     1.9375}, {-0.125, 1.9375}, {-0.125, 1.875}, {-0.125, 1.9375}, {-0.0625, 
+     1.9375}, {0, 1.9375}, {0, 1.875}, {0.0625, 1.875}, {0.0625, 1.8125}, {
+     0.0625, 1.75}, {0, 1.75}, {0, 1.8125}, {0.0625, 1.8125}, {0.125, 
+     1.8125}, {0.125, 1.75}, {0.1875, 1.75}, {0.1875, 1.6875}, {0.1875, 
+     1.625}, {0.125, 1.625}, {0.1875, 1.625}, {0.1875, 1.5625}, {0.1875, 
+     1.5}, {0.125, 1.5}, {0.125, 1.4375}, {0.0625, 1.4375}, {0, 1.4375}, {
+     0, 1.5}, {-0.0625, 1.5}, {-0.0625, 1.5625}, {-0.0625, 1.625}, {
+     0, 1.625}, {0, 1.6875}, {0.0625, 1.6875}, {0.125, 1.6875}, {0.125, 
+     1.625}, {0.125, 1.6875}, {0.1875, 1.6875}, {0.25, 1.6875}, {0.25, 
+     1.625}, {0.3125, 1.625}, {0.3125, 1.5625}, {0.3125, 1.5}, {0.25, 1.5}, {
+     0.25, 1.5625}, {0.3125, 1.5625}, {0.375, 1.5625}, {0.375, 1.5}, {0.4375, 
+     1.5}, {0.4375, 1.4375}, {0.4375, 1.375}, {0.375, 1.375}, {0.4375, 
+     1.375}, {0.4375, 1.3125}, {0.4375, 1.25}, {0.375, 1.25}, {0.375, 
+     1.1875}, {0.3125, 1.1875}, {0.25, 1.1875}, {0.25, 1.25}, {0.25, 
+     1.3125}, {0.3125, 1.3125}, {0.375, 1.3125}, {0.375, 1.25}, {0.4375, 
+     1.25}, {0.4375, 1.1875}, {0.4375, 1.125}, {0.375, 1.125}, {0.4375, 
+     1.125}, {0.4375, 1.0625}, {0.4375, 1}, {0.375, 1}, {0.375, 0.9375}, {
+     0.3125, 0.9375}, {0.25, 0.9375}, {0.25, 1}, {0.3125, 1}, {0.3125, 
+     0.9375}, {0.3125, 0.875}, {0.25, 0.875}, {0.25, 0.8125}, {0.1875, 
+     0.8125}, {0.125, 0.8125}, {0.125, 0.875}, {0.125, 0.8125}, {0.0625, 
+     0.8125}, {0, 0.8125}, {0, 0.875}, {-0.0625, 0.875}, {-0.0625, 
+     0.9375}, {-0.0625, 1}, {0, 1}, {0.0625, 1}, {0.0625, 0.9375}, {0.0625, 
+     0.875}, {0, 0.875}, {0, 0.8125}, {-0.0625, 0.8125}, {-0.125, 
+     0.8125}, {-0.125, 0.875}, {-0.125, 0.8125}, {-0.1875, 0.8125}, {-0.25, 
+     0.8125}, {-0.25, 0.875}, {-0.3125, 0.875}, {-0.3125, 
+     0.9375}, {-0.3125, 1}, {-0.25, 1}, {-0.25, 0.9375}, {-0.3125, 
+     0.9375}, {-0.375, 0.9375}, {-0.375, 1}, {-0.4375, 1}, {-0.4375, 
+     1.0625}, {-0.4375, 1.125}, {-0.375, 1.125}, {-0.4375, 1.125}, {-0.4375, 
+     1.1875}, {-0.4375, 1.25}, {-0.375, 1.25}, {-0.375, 1.3125}, {-0.3125, 
+     1.3125}, {-0.25, 1.3125}, {-0.25, 1.25}, {-0.25, 1.1875}, {-0.3125, 
+     1.1875}, {-0.375, 1.1875}, {-0.375, 1.25}, {-0.4375, 1.25}, {-0.4375, 
+     1.3125}, {-0.4375, 1.375}, {-0.375, 1.375}, {-0.4375, 1.375}, {-0.4375, 
+     1.4375}, {-0.4375, 1.5}, {-0.375, 1.5}, {-0.375, 1.5625}, {-0.3125, 
+     1.5625}, {-0.25, 1.5625}, {-0.25, 1.5}, {-0.3125, 1.5}, {-0.3125, 
+     1.5625}, {-0.3125, 1.625}, {-0.25, 1.625}, {-0.25, 1.6875}, {-0.1875, 
+     1.6875}, {-0.125, 1.6875}, {-0.125, 1.625}, {-0.125, 1.6875}, {-0.0625, 
+     1.6875}, {0, 1.6875}, {0, 1.625}, {0.0625, 1.625}, {0.0625, 1.5625}, {
+     0.0625, 1.5}, {0, 1.5}, {0, 1.4375}, {-0.0625, 1.4375}, {-0.125, 
+     1.4375}, {-0.125, 1.5}, {-0.1875, 1.5}, {-0.1875, 1.5625}, {-0.1875, 
+     1.625}, {-0.125, 1.625}, {-0.1875, 1.625}, {-0.1875, 1.6875}, {-0.1875, 
+     1.75}, {-0.125, 1.75}, {-0.125, 1.8125}, {-0.0625, 1.8125}, {
+     0, 1.8125}, {0, 1.75}, {-0.0625, 1.75}, {-0.0625, 1.8125}, {-0.0625, 
+     1.875}, {0, 1.875}, {0, 1.9375}, {0.0625, 1.9375}, {0.125, 1.9375}, {
+     0.125, 1.875}, {0.125, 1.9375}, {0.1875, 1.9375}, {0.25, 1.9375}, {0.25, 
+     1.875}, {0.3125, 1.875}, {0.3125, 1.8125}, {0.3125, 1.75}, {0.25, 
+     1.75}, {0.1875, 1.75}, {0.1875, 1.8125}, {0.1875, 1.875}, {0.25, 
+     1.875}, {0.25, 1.9375}, {0.3125, 1.9375}, {0.375, 1.9375}, {0.375, 
+     1.875}, {0.375, 1.9375}, {0.4375, 1.9375}, {0.5, 1.9375}, {0.5, 1.875}, {
+     0.5625, 1.875}, {0.5625, 1.8125}, {0.5625, 1.75}, {0.5, 1.75}, {0.5, 
+     1.8125}, {0.5625, 1.8125}, {0.625, 1.8125}, {0.625, 1.75}, {0.6875, 
+     1.75}, {0.6875, 1.6875}, {0.6875, 1.625}, {0.625, 1.625}, {0.6875, 
+     1.625}, {0.6875, 1.5625}, {0.6875, 1.5}, {0.625, 1.5}, {0.625, 1.4375}, {
+     0.5625, 1.4375}, {0.5, 1.4375}, {0.5, 1.5}, {0.5, 1.4375}, {0.4375, 
+     1.4375}, {0.375, 1.4375}, {0.375, 1.5}, {0.3125, 1.5}, {0.3125, 
+     1.5625}, {0.3125, 1.625}, {0.375, 1.625}, {0.3125, 1.625}, {0.3125, 
+     1.6875}, {0.3125, 1.75}, {0.375, 1.75}, {0.375, 1.8125}, {0.4375, 
+     1.8125}, {0.5, 1.8125}, {0.5, 1.75}, {0.4375, 1.75}, {0.4375, 1.8125}, {
+     0.4375, 1.875}, {0.5, 1.875}, {0.5, 1.9375}, {0.5625, 1.9375}, {0.625, 
+     1.9375}, {0.625, 1.875}, {0.625, 1.9375}, {0.6875, 1.9375}, {0.75, 
+     1.9375}, {0.75, 1.875}, {0.8125, 1.875}, {0.8125, 1.8125}, {0.8125, 
+     1.75}, {0.75, 1.75}, {0.6875, 1.75}, {0.6875, 1.8125}, {0.6875, 1.875}, {
+     0.75, 1.875}, {0.75, 1.9375}, {0.8125, 1.9375}, {0.875, 1.9375}, {0.875, 
+     1.875}, {0.875, 1.9375}, {0.9375, 1.9375}, {1, 1.9375}, {1, 1.875}, {
+     1.0625, 1.875}, {1.0625, 1.8125}, {1.0625, 1.75}, {1, 1.75}, {
+     1, 1.8125}, {1.0625, 1.8125}, {1.125, 1.8125}, {1.125, 1.75}, {1.1875, 
+     1.75}, {1.1875, 1.6875}, {1.1875, 1.625}, {1.125, 1.625}, {1.1875, 
+     1.625}, {1.1875, 1.5625}, {1.1875, 1.5}, {1.125, 1.5}, {1.125, 1.4375}, {
+     1.0625, 1.4375}, {1, 1.4375}, {1, 1.5}, {0.9375, 1.5}, {0.9375, 
+     1.5625}, {0.9375, 1.625}, {1, 1.625}, {1, 1.6875}, {1.0625, 1.6875}, {
+     1.125, 1.6875}, {1.125, 1.625}, {1.125, 1.6875}, {1.1875, 1.6875}, {1.25,
+      1.6875}, {1.25, 1.625}, {1.3125, 1.625}, {1.3125, 1.5625}, {1.3125, 
+     1.5}, {1.25, 1.5}, {1.25, 1.5625}, {1.3125, 1.5625}, {1.375, 1.5625}, {
+     1.375, 1.5}, {1.4375, 1.5}, {1.4375, 1.4375}, {1.4375, 1.375}, {1.375, 
+     1.375}, {1.4375, 1.375}, {1.4375, 1.3125}, {1.4375, 1.25}, {1.375, 
+     1.25}, {1.375, 1.1875}, {1.3125, 1.1875}, {1.25, 1.1875}, {1.25, 1.25}, {
+     1.25, 1.3125}, {1.3125, 1.3125}, {1.375, 1.3125}, {1.375, 1.25}, {1.4375,
+      1.25}, {1.4375, 1.1875}, {1.4375, 1.125}, {1.375, 1.125}, {1.4375, 
+     1.125}, {1.4375, 1.0625}, {1.4375, 1}, {1.375, 1}, {1.375, 0.9375}, {
+     1.3125, 0.9375}, {1.25, 0.9375}, {1.25, 1}, {1.3125, 1}, {1.3125, 
+     0.9375}, {1.3125, 0.875}, {1.25, 0.875}, {1.25, 0.8125}, {1.1875, 
+     0.8125}, {1.125, 0.8125}, {1.125, 0.875}, {1.125, 0.8125}, {1.0625, 
+     0.8125}, {1, 0.8125}, {1, 0.875}, {0.9375, 0.875}, {0.9375, 0.9375}, {
+     0.9375, 1}, {1, 1}, {1, 0.9375}, {0.9375, 0.9375}, {0.875, 0.9375}, {
+     0.875, 1}, {0.8125, 1}, {0.8125, 1.0625}, {0.8125, 1.125}, {0.875, 
+     1.125}, {0.8125, 1.125}, {0.8125, 1.1875}, {0.8125, 1.25}, {0.875, 
+     1.25}, {0.875, 1.3125}, {0.9375, 1.3125}, {1, 1.3125}, {1, 1.25}, {
+     0.9375, 1.25}, {0.9375, 1.3125}, {0.9375, 1.375}, {1, 1.375}, {
+     1, 1.4375}, {1.0625, 1.4375}, {1.125, 1.4375}, {1.125, 1.375}, {1.125, 
+     1.4375}, {1.1875, 1.4375}, {1.25, 1.4375}, {1.25, 1.375}, {1.3125, 
+     1.375}, {1.3125, 1.3125}, {1.3125, 1.25}, {1.25, 1.25}, {1.1875, 1.25}, {
+     1.1875, 1.3125}, {1.1875, 1.375}, {1.25, 1.375}, {1.25, 1.4375}, {1.3125,
+      1.4375}, {1.375, 1.4375}, {1.375, 1.375}, {1.375, 1.4375}, {1.4375, 
+     1.4375}, {1.5, 1.4375}, {1.5, 1.375}, {1.5625, 1.375}, {1.5625, 
+     1.3125}, {1.5625, 1.25}, {1.5, 1.25}, {1.5, 1.3125}, {1.5625, 1.3125}, {
+     1.625, 1.3125}, {1.625, 1.25}, {1.6875, 1.25}, {1.6875, 1.1875}, {1.6875,
+      1.125}, {1.625, 1.125}, {1.6875, 1.125}, {1.6875, 1.0625}, {
+     1.6875, 1}, {1.625, 1}, {1.625, 0.9375}, {1.5625, 0.9375}, {1.5, 
+     0.9375}, {1.5, 1}, {1.4375, 1}, {1.4375, 1.0625}, {1.4375, 1.125}, {1.5, 
+     1.125}, {1.5, 1.1875}, {1.5625, 1.1875}, {1.625, 1.1875}, {1.625, 
+     1.125}, {1.625, 1.1875}, {1.6875, 1.1875}, {1.75, 1.1875}, {1.75, 
+     1.125}, {1.8125, 1.125}, {1.8125, 1.0625}, {1.8125, 1}, {1.75, 1}, {1.75,
+      1.0625}, {1.8125, 1.0625}, {1.875, 1.0625}, {1.875, 1}, {1.9375, 1}, {
+     1.9375, 0.9375}, {1.9375, 0.875}, {1.875, 0.875}, {1.9375, 0.875}, {
+     1.9375, 0.8125}, {1.9375, 0.75}, {1.875, 0.75}, {1.875, 0.6875}, {1.8125,
+      0.6875}, {1.75, 0.6875}, {1.75, 0.75}, {1.75, 0.8125}, {1.8125, 
+     0.8125}, {1.875, 0.8125}, {1.875, 0.75}, {1.9375, 0.75}, {1.9375, 
+     0.6875}, {1.9375, 0.625}, {1.875, 0.625}, {1.9375, 0.625}, {1.9375, 
+     0.5625}, {1.9375, 0.5}, {1.875, 0.5}, {1.875, 0.4375}, {1.8125, 
+     0.4375}, {1.75, 0.4375}, {1.75, 0.5}, {1.8125, 0.5}, {1.8125, 0.4375}, {
+     1.8125, 0.375}, {1.75, 0.375}, {1.75, 0.3125}, {1.6875, 0.3125}, {1.625, 
+     0.3125}, {1.625, 0.375}, {1.625, 0.3125}, {1.5625, 0.3125}, {1.5, 
+     0.3125}, {1.5, 0.375}, {1.4375, 0.375}, {1.4375, 0.4375}, {1.4375, 
+     0.5}, {1.5, 0.5}, {1.4375, 0.5}, {1.4375, 0.5625}, {1.4375, 0.625}, {1.5,
+      0.625}, {1.5, 0.6875}, {1.5625, 0.6875}, {1.625, 0.6875}, {1.625, 
+     0.625}, {1.625, 0.6875}, {1.6875, 0.6875}, {1.75, 0.6875}, {1.75, 
+     0.625}, {1.8125, 0.625}, {1.8125, 0.5625}, {1.8125, 0.5}, {1.75, 0.5}, {
+     1.75, 0.5625}, {1.8125, 0.5625}, {1.875, 0.5625}, {1.875, 0.5}, {1.9375, 
+     0.5}, {1.9375, 0.4375}, {1.9375, 0.375}, {1.875, 0.375}, {1.9375, 
+     0.375}, {1.9375, 0.3125}, {1.9375, 0.25}, {1.875, 0.25}, {1.875, 
+     0.1875}, {1.8125, 0.1875}, {1.75, 0.1875}, {1.75, 0.25}, {1.75, 
+     0.3125}, {1.8125, 0.3125}, {1.875, 0.3125}, {1.875, 0.25}, {1.9375, 
+     0.25}, {1.9375, 0.1875}, {1.9375, 0.125}, {1.875, 0.125}, {1.9375, 
+     0.125}, {1.9375, 0.0625}, {1.9375, 0}, {1.875, 0}, {1.875, -0.0625}, {
+     1.8125, -0.0625}, {1.75, -0.0625}, {1.75, 0}, {1.8125, 0}, {
+     1.8125, -0.0625}, {1.8125, -0.125}, {1.75, -0.125}, {1.75, -0.1875}, {
+     1.6875, -0.1875}, {1.625, -0.1875}, {1.625, -0.125}, {1.625, -0.1875}, {
+     1.5625, -0.1875}, {1.5, -0.1875}, {1.5, -0.125}, {1.4375, -0.125}, {
+     1.4375, -0.0625}, {1.4375, 0}, {1.5, 0}, {1.5, 0.0625}, {1.5625, 
+     0.0625}, {1.625, 0.0625}, {1.625, 0}, {1.6875, 0}, {1.6875, -0.0625}, {
+     1.6875, -0.125}, {1.625, -0.125}, {1.6875, -0.125}, {1.6875, -0.1875}, {
+     1.6875, -0.25}, {1.625, -0.25}, {1.625, -0.3125}, {1.5625, -0.3125}, {
+     1.5, -0.3125}, {1.5, -0.25}, {1.5625, -0.25}, {1.5625, -0.3125}, {
+     1.5625, -0.375}, {1.5, -0.375}, {1.5, -0.4375}, {1.4375, -0.4375}, {
+     1.375, -0.4375}, {1.375, -0.375}, {1.375, -0.4375}, {1.3125, -0.4375}, {
+     1.25, -0.4375}, {1.25, -0.375}, {1.1875, -0.375}, {1.1875, -0.3125}, {
+     1.1875, -0.25}, {1.25, -0.25}, {1.3125, -0.25}, {1.3125, -0.3125}, {
+     1.3125, -0.375}, {1.25, -0.375}, {1.25, -0.4375}, {1.1875, -0.4375}, {
+     1.125, -0.4375}, {1.125, -0.375}, {1.125, -0.4375}, {1.0625, -0.4375}, {
+     1, -0.4375}, {1, -0.375}, {0.9375, -0.375}, {0.9375, -0.3125}, {
+     0.9375, -0.25}, {1, -0.25}, {1, -0.3125}, {0.9375, -0.3125}, {
+     0.875, -0.3125}, {0.875, -0.25}, {0.8125, -0.25}, {0.8125, -0.1875}, {
+     0.8125, -0.125}, {0.875, -0.125}, {0.8125, -0.125}, {0.8125, -0.0625}, {
+     0.8125, 0}, {0.875, 0}, {0.875, 0.0625}, {0.9375, 0.0625}, {1, 0.0625}, {
+     1, 0}}]]]], "Output",
+ CellChangeTimes->{{3.763902378552915*^9, 3.763902400103943*^9}, {
+  3.763902439122368*^9, 3.76390245961512*^9}, {3.7639459826607*^9, 
+  3.7639460572796445`*^9}},
+ CellLabel->"Out[41]=",ExpressionUUID->"cbb30df8-3267-401f-84a6-82a708c25fdb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "\:8fd9\:6bb5\:4ee3\:7801\:7531yxlllc\:5de8\:4f6c\:6539\:8fdb", "\:ff0c", 
+    "\:6548\:7387\:5927\:589e"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"x_", ",", "y_", ",", "z_", ",", "o_"}], "]"}], "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"1", "/", "2"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "o"}], "+", "x", "+", "y", "+", "z"}], ")"}]}], ",", 
+       RowBox[{
+        RowBox[{"1", "/", "2"}], " ", 
+        RowBox[{"(", 
+         RowBox[{"o", "-", "x", "+", "y", "+", "z"}], ")"}]}]}], "}"}]}], 
+    ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"Graphics", "@", 
+     RowBox[{"Line", "@", 
+      RowBox[{"Nest", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Riffle", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"f", "@@@", 
+            RowBox[{"Flatten", "/@", 
+             RowBox[{
+              RowBox[{"Partition", "[", 
+               RowBox[{"#", ",", "2", ",", "1"}], "]"}], "[", 
+              RowBox[{"[", 
+               RowBox[{";;", 
+                RowBox[{
+                 RowBox[{"Length", "[", "#", "]"}], "-", "1"}]}], "]"}], 
+              "]"}]}]}]}], "]"}], "&"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "0"}], "}"}]}], "}"}], ",", "10"}], "]"}]}]}], "//",
+     "AbsoluteTiming"}]}]}]], "Input",
+ CellChangeTimes->{{3.763945923131954*^9, 3.7639459382836494`*^9}, {
+   3.763946001003699*^9, 3.7639460169943104`*^9}, 3.763946054712005*^9, {
+   3.7639460991424103`*^9, 3.7639461123643274`*^9}, {3.7639640753246975`*^9, 
+   3.7639641049927263`*^9}},ExpressionUUID->"a04bfcff-1c50-4b76-9352-\
+4c37e04b09e3"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.004320138535704005`", ",", 
+   GraphicsBox[
+    LineBox[NCache[{{-1, 0}, {-1, Rational[1, 16]}, {
+       Rational[-15, 16], Rational[1, 16]}, {
+       Rational[-7, 8], Rational[1, 16]}, {Rational[-7, 8], 0}, {
+       Rational[-13, 16], 0}, {Rational[-13, 16], Rational[-1, 16]}, {
+       Rational[-13, 16], Rational[-1, 8]}, {
+       Rational[-7, 8], Rational[-1, 8]}, {
+       Rational[-13, 16], Rational[-1, 8]}, {
+       Rational[-13, 16], Rational[-3, 16]}, {
+       Rational[-13, 16], Rational[-1, 4]}, {
+       Rational[-7, 8], Rational[-1, 4]}, {
+       Rational[-7, 8], Rational[-5, 16]}, {
+       Rational[-15, 16], Rational[-5, 16]}, {-1, Rational[-5, 16]}, {-1, 
+        Rational[-1, 4]}, {Rational[-15, 16], Rational[-1, 4]}, {
+       Rational[-15, 16], Rational[-5, 16]}, {
+       Rational[-15, 16], Rational[-3, 8]}, {-1, Rational[-3, 8]}, {-1, 
+        Rational[-7, 16]}, {Rational[-17, 16], Rational[-7, 16]}, {
+       Rational[-9, 8], Rational[-7, 16]}, {
+       Rational[-9, 8], Rational[-3, 8]}, {
+       Rational[-9, 8], Rational[-7, 16]}, {
+       Rational[-19, 16], Rational[-7, 16]}, {
+       Rational[-5, 4], Rational[-7, 16]}, {
+       Rational[-5, 4], Rational[-3, 8]}, {
+       Rational[-21, 16], Rational[-3, 8]}, {
+       Rational[-21, 16], Rational[-5, 16]}, {
+       Rational[-21, 16], Rational[-1, 4]}, {
+       Rational[-5, 4], Rational[-1, 4]}, {
+       Rational[-19, 16], Rational[-1, 4]}, {
+       Rational[-19, 16], Rational[-5, 16]}, {
+       Rational[-19, 16], Rational[-3, 8]}, {
+       Rational[-5, 4], Rational[-3, 8]}, {
+       Rational[-5, 4], Rational[-7, 16]}, {
+       Rational[-21, 16], Rational[-7, 16]}, {
+       Rational[-11, 8], Rational[-7, 16]}, {
+       Rational[-11, 8], Rational[-3, 8]}, {
+       Rational[-11, 8], Rational[-7, 16]}, {
+       Rational[-23, 16], Rational[-7, 16]}, {
+       Rational[-3, 2], Rational[-7, 16]}, {
+       Rational[-3, 2], Rational[-3, 8]}, {
+       Rational[-25, 16], Rational[-3, 8]}, {
+       Rational[-25, 16], Rational[-5, 16]}, {
+       Rational[-25, 16], Rational[-1, 4]}, {
+       Rational[-3, 2], Rational[-1, 4]}, {
+       Rational[-3, 2], Rational[-5, 16]}, {
+       Rational[-25, 16], Rational[-5, 16]}, {
+       Rational[-13, 8], Rational[-5, 16]}, {
+       Rational[-13, 8], Rational[-1, 4]}, {
+       Rational[-27, 16], Rational[-1, 4]}, {
+       Rational[-27, 16], Rational[-3, 16]}, {
+       Rational[-27, 16], Rational[-1, 8]}, {
+       Rational[-13, 8], Rational[-1, 8]}, {
+       Rational[-27, 16], Rational[-1, 8]}, {
+       Rational[-27, 16], Rational[-1, 16]}, {Rational[-27, 16], 0}, {
+       Rational[-13, 8], 0}, {Rational[-13, 8], Rational[1, 16]}, {
+       Rational[-25, 16], Rational[1, 16]}, {
+       Rational[-3, 2], Rational[1, 16]}, {Rational[-3, 2], 0}, {
+       Rational[-23, 16], 0}, {Rational[-23, 16], Rational[-1, 16]}, {
+       Rational[-23, 16], Rational[-1, 8]}, {
+       Rational[-3, 2], Rational[-1, 8]}, {
+       Rational[-3, 2], Rational[-3, 16]}, {
+       Rational[-25, 16], Rational[-3, 16]}, {
+       Rational[-13, 8], Rational[-3, 16]}, {
+       Rational[-13, 8], Rational[-1, 8]}, {
+       Rational[-13, 8], Rational[-3, 16]}, {
+       Rational[-27, 16], Rational[-3, 16]}, {
+       Rational[-7, 4], Rational[-3, 16]}, {
+       Rational[-7, 4], Rational[-1, 8]}, {
+       Rational[-29, 16], Rational[-1, 8]}, {
+       Rational[-29, 16], Rational[-1, 16]}, {Rational[-29, 16], 0}, {
+       Rational[-7, 4], 0}, {Rational[-7, 4], Rational[-1, 16]}, {
+       Rational[-29, 16], Rational[-1, 16]}, {
+       Rational[-15, 8], Rational[-1, 16]}, {Rational[-15, 8], 0}, {
+       Rational[-31, 16], 0}, {Rational[-31, 16], Rational[1, 16]}, {
+       Rational[-31, 16], Rational[1, 8]}, {
+       Rational[-15, 8], Rational[1, 8]}, {
+       Rational[-31, 16], Rational[1, 8]}, {
+       Rational[-31, 16], Rational[3, 16]}, {
+       Rational[-31, 16], Rational[1, 4]}, {
+       Rational[-15, 8], Rational[1, 4]}, {
+       Rational[-15, 8], Rational[5, 16]}, {
+       Rational[-29, 16], Rational[5, 16]}, {
+       Rational[-7, 4], Rational[5, 16]}, {Rational[-7, 4], Rational[1, 4]}, {
+       Rational[-7, 4], Rational[3, 16]}, {
+       Rational[-29, 16], Rational[3, 16]}, {
+       Rational[-15, 8], Rational[3, 16]}, {
+       Rational[-15, 8], Rational[1, 4]}, {
+       Rational[-31, 16], Rational[1, 4]}, {
+       Rational[-31, 16], Rational[5, 16]}, {
+       Rational[-31, 16], Rational[3, 8]}, {
+       Rational[-15, 8], Rational[3, 8]}, {
+       Rational[-31, 16], Rational[3, 8]}, {
+       Rational[-31, 16], Rational[7, 16]}, {
+       Rational[-31, 16], Rational[1, 2]}, {
+       Rational[-15, 8], Rational[1, 2]}, {
+       Rational[-15, 8], Rational[9, 16]}, {
+       Rational[-29, 16], Rational[9, 16]}, {
+       Rational[-7, 4], Rational[9, 16]}, {Rational[-7, 4], Rational[1, 2]}, {
+       Rational[-29, 16], Rational[1, 2]}, {
+       Rational[-29, 16], Rational[9, 16]}, {
+       Rational[-29, 16], Rational[5, 8]}, {
+       Rational[-7, 4], Rational[5, 8]}, {
+       Rational[-7, 4], Rational[11, 16]}, {
+       Rational[-27, 16], Rational[11, 16]}, {
+       Rational[-13, 8], Rational[11, 16]}, {
+       Rational[-13, 8], Rational[5, 8]}, {
+       Rational[-13, 8], Rational[11, 16]}, {
+       Rational[-25, 16], Rational[11, 16]}, {
+       Rational[-3, 2], Rational[11, 16]}, {
+       Rational[-3, 2], Rational[5, 8]}, {
+       Rational[-23, 16], Rational[5, 8]}, {
+       Rational[-23, 16], Rational[9, 16]}, {
+       Rational[-23, 16], Rational[1, 2]}, {
+       Rational[-3, 2], Rational[1, 2]}, {
+       Rational[-23, 16], Rational[1, 2]}, {
+       Rational[-23, 16], Rational[7, 16]}, {
+       Rational[-23, 16], Rational[3, 8]}, {
+       Rational[-3, 2], Rational[3, 8]}, {Rational[-3, 2], Rational[5, 16]}, {
+       Rational[-25, 16], Rational[5, 16]}, {
+       Rational[-13, 8], Rational[5, 16]}, {
+       Rational[-13, 8], Rational[3, 8]}, {
+       Rational[-13, 8], Rational[5, 16]}, {
+       Rational[-27, 16], Rational[5, 16]}, {
+       Rational[-7, 4], Rational[5, 16]}, {Rational[-7, 4], Rational[3, 8]}, {
+       Rational[-29, 16], Rational[3, 8]}, {
+       Rational[-29, 16], Rational[7, 16]}, {
+       Rational[-29, 16], Rational[1, 2]}, {
+       Rational[-7, 4], Rational[1, 2]}, {Rational[-7, 4], Rational[7, 16]}, {
+       Rational[-29, 16], Rational[7, 16]}, {
+       Rational[-15, 8], Rational[7, 16]}, {
+       Rational[-15, 8], Rational[1, 2]}, {
+       Rational[-31, 16], Rational[1, 2]}, {
+       Rational[-31, 16], Rational[9, 16]}, {
+       Rational[-31, 16], Rational[5, 8]}, {
+       Rational[-15, 8], Rational[5, 8]}, {
+       Rational[-31, 16], Rational[5, 8]}, {
+       Rational[-31, 16], Rational[11, 16]}, {
+       Rational[-31, 16], Rational[3, 4]}, {
+       Rational[-15, 8], Rational[3, 4]}, {
+       Rational[-15, 8], Rational[13, 16]}, {
+       Rational[-29, 16], Rational[13, 16]}, {
+       Rational[-7, 4], Rational[13, 16]}, {
+       Rational[-7, 4], Rational[3, 4]}, {
+       Rational[-7, 4], Rational[11, 16]}, {
+       Rational[-29, 16], Rational[11, 16]}, {
+       Rational[-15, 8], Rational[11, 16]}, {
+       Rational[-15, 8], Rational[3, 4]}, {
+       Rational[-31, 16], Rational[3, 4]}, {
+       Rational[-31, 16], Rational[13, 16]}, {
+       Rational[-31, 16], Rational[7, 8]}, {
+       Rational[-15, 8], Rational[7, 8]}, {
+       Rational[-31, 16], Rational[7, 8]}, {
+       Rational[-31, 16], Rational[15, 16]}, {Rational[-31, 16], 1}, {
+       Rational[-15, 8], 1}, {Rational[-15, 8], Rational[17, 16]}, {
+       Rational[-29, 16], Rational[17, 16]}, {
+       Rational[-7, 4], Rational[17, 16]}, {Rational[-7, 4], 1}, {
+       Rational[-29, 16], 1}, {Rational[-29, 16], Rational[17, 16]}, {
+       Rational[-29, 16], Rational[9, 8]}, {
+       Rational[-7, 4], Rational[9, 8]}, {
+       Rational[-7, 4], Rational[19, 16]}, {
+       Rational[-27, 16], Rational[19, 16]}, {
+       Rational[-13, 8], Rational[19, 16]}, {
+       Rational[-13, 8], Rational[9, 8]}, {
+       Rational[-13, 8], Rational[19, 16]}, {
+       Rational[-25, 16], Rational[19, 16]}, {
+       Rational[-3, 2], Rational[19, 16]}, {
+       Rational[-3, 2], Rational[9, 8]}, {
+       Rational[-23, 16], Rational[9, 8]}, {
+       Rational[-23, 16], Rational[17, 16]}, {Rational[-23, 16], 1}, {
+       Rational[-3, 2], 1}, {Rational[-3, 2], Rational[15, 16]}, {
+       Rational[-25, 16], Rational[15, 16]}, {
+       Rational[-13, 8], Rational[15, 16]}, {Rational[-13, 8], 1}, {
+       Rational[-27, 16], 1}, {Rational[-27, 16], Rational[17, 16]}, {
+       Rational[-27, 16], Rational[9, 8]}, {
+       Rational[-13, 8], Rational[9, 8]}, {
+       Rational[-27, 16], Rational[9, 8]}, {
+       Rational[-27, 16], Rational[19, 16]}, {
+       Rational[-27, 16], Rational[5, 4]}, {
+       Rational[-13, 8], Rational[5, 4]}, {
+       Rational[-13, 8], Rational[21, 16]}, {
+       Rational[-25, 16], Rational[21, 16]}, {
+       Rational[-3, 2], Rational[21, 16]}, {
+       Rational[-3, 2], Rational[5, 4]}, {
+       Rational[-25, 16], Rational[5, 4]}, {
+       Rational[-25, 16], Rational[21, 16]}, {
+       Rational[-25, 16], Rational[11, 8]}, {
+       Rational[-3, 2], Rational[11, 8]}, {
+       Rational[-3, 2], Rational[23, 16]}, {
+       Rational[-23, 16], Rational[23, 16]}, {
+       Rational[-11, 8], Rational[23, 16]}, {
+       Rational[-11, 8], Rational[11, 8]}, {
+       Rational[-11, 8], Rational[23, 16]}, {
+       Rational[-21, 16], Rational[23, 16]}, {
+       Rational[-5, 4], Rational[23, 16]}, {
+       Rational[-5, 4], Rational[11, 8]}, {
+       Rational[-19, 16], Rational[11, 8]}, {
+       Rational[-19, 16], Rational[21, 16]}, {
+       Rational[-19, 16], Rational[5, 4]}, {
+       Rational[-5, 4], Rational[5, 4]}, {
+       Rational[-21, 16], Rational[5, 4]}, {
+       Rational[-21, 16], Rational[21, 16]}, {
+       Rational[-21, 16], Rational[11, 8]}, {
+       Rational[-5, 4], Rational[11, 8]}, {
+       Rational[-5, 4], Rational[23, 16]}, {
+       Rational[-19, 16], Rational[23, 16]}, {
+       Rational[-9, 8], Rational[23, 16]}, {
+       Rational[-9, 8], Rational[11, 8]}, {
+       Rational[-9, 8], Rational[23, 16]}, {
+       Rational[-17, 16], Rational[23, 16]}, {-1, Rational[23, 16]}, {-1, 
+        Rational[11, 8]}, {Rational[-15, 16], Rational[11, 8]}, {
+       Rational[-15, 16], Rational[21, 16]}, {
+       Rational[-15, 16], Rational[5, 4]}, {-1, Rational[5, 4]}, {-1, 
+        Rational[21, 16]}, {Rational[-15, 16], Rational[21, 16]}, {
+       Rational[-7, 8], Rational[21, 16]}, {
+       Rational[-7, 8], Rational[5, 4]}, {
+       Rational[-13, 16], Rational[5, 4]}, {
+       Rational[-13, 16], Rational[19, 16]}, {
+       Rational[-13, 16], Rational[9, 8]}, {
+       Rational[-7, 8], Rational[9, 8]}, {
+       Rational[-13, 16], Rational[9, 8]}, {
+       Rational[-13, 16], Rational[17, 16]}, {Rational[-13, 16], 1}, {
+       Rational[-7, 8], 1}, {Rational[-7, 8], Rational[15, 16]}, {
+       Rational[-15, 16], Rational[15, 16]}, {-1, Rational[15, 16]}, {-1, 
+       1}, {Rational[-15, 16], 1}, {Rational[-15, 16], Rational[15, 16]}, {
+       Rational[-15, 16], Rational[7, 8]}, {-1, Rational[7, 8]}, {-1, 
+        Rational[13, 16]}, {Rational[-17, 16], Rational[13, 16]}, {
+       Rational[-9, 8], Rational[13, 16]}, {
+       Rational[-9, 8], Rational[7, 8]}, {
+       Rational[-9, 8], Rational[13, 16]}, {
+       Rational[-19, 16], Rational[13, 16]}, {
+       Rational[-5, 4], Rational[13, 16]}, {
+       Rational[-5, 4], Rational[7, 8]}, {
+       Rational[-21, 16], Rational[7, 8]}, {
+       Rational[-21, 16], Rational[15, 16]}, {Rational[-21, 16], 1}, {
+       Rational[-5, 4], 1}, {Rational[-5, 4], Rational[15, 16]}, {
+       Rational[-21, 16], Rational[15, 16]}, {
+       Rational[-11, 8], Rational[15, 16]}, {Rational[-11, 8], 1}, {
+       Rational[-23, 16], 1}, {Rational[-23, 16], Rational[17, 16]}, {
+       Rational[-23, 16], Rational[9, 8]}, {
+       Rational[-11, 8], Rational[9, 8]}, {
+       Rational[-23, 16], Rational[9, 8]}, {
+       Rational[-23, 16], Rational[19, 16]}, {
+       Rational[-23, 16], Rational[5, 4]}, {
+       Rational[-11, 8], Rational[5, 4]}, {
+       Rational[-11, 8], Rational[21, 16]}, {
+       Rational[-21, 16], Rational[21, 16]}, {
+       Rational[-5, 4], Rational[21, 16]}, {
+       Rational[-5, 4], Rational[5, 4]}, {
+       Rational[-5, 4], Rational[19, 16]}, {
+       Rational[-21, 16], Rational[19, 16]}, {
+       Rational[-11, 8], Rational[19, 16]}, {
+       Rational[-11, 8], Rational[5, 4]}, {
+       Rational[-23, 16], Rational[5, 4]}, {
+       Rational[-23, 16], Rational[21, 16]}, {
+       Rational[-23, 16], Rational[11, 8]}, {
+       Rational[-11, 8], Rational[11, 8]}, {
+       Rational[-23, 16], Rational[11, 8]}, {
+       Rational[-23, 16], Rational[23, 16]}, {
+       Rational[-23, 16], Rational[3, 2]}, {
+       Rational[-11, 8], Rational[3, 2]}, {
+       Rational[-11, 8], Rational[25, 16]}, {
+       Rational[-21, 16], Rational[25, 16]}, {
+       Rational[-5, 4], Rational[25, 16]}, {
+       Rational[-5, 4], Rational[3, 2]}, {
+       Rational[-21, 16], Rational[3, 2]}, {
+       Rational[-21, 16], Rational[25, 16]}, {
+       Rational[-21, 16], Rational[13, 8]}, {
+       Rational[-5, 4], Rational[13, 8]}, {
+       Rational[-5, 4], Rational[27, 16]}, {
+       Rational[-19, 16], Rational[27, 16]}, {
+       Rational[-9, 8], Rational[27, 16]}, {
+       Rational[-9, 8], Rational[13, 8]}, {
+       Rational[-9, 8], Rational[27, 16]}, {
+       Rational[-17, 16], Rational[27, 16]}, {-1, Rational[27, 16]}, {-1, 
+        Rational[13, 8]}, {Rational[-15, 16], Rational[13, 8]}, {
+       Rational[-15, 16], Rational[25, 16]}, {
+       Rational[-15, 16], Rational[3, 2]}, {-1, Rational[3, 2]}, {-1, 
+        Rational[23, 16]}, {Rational[-17, 16], Rational[23, 16]}, {
+       Rational[-9, 8], Rational[23, 16]}, {
+       Rational[-9, 8], Rational[3, 2]}, {
+       Rational[-19, 16], Rational[3, 2]}, {
+       Rational[-19, 16], Rational[25, 16]}, {
+       Rational[-19, 16], Rational[13, 8]}, {
+       Rational[-9, 8], Rational[13, 8]}, {
+       Rational[-19, 16], Rational[13, 8]}, {
+       Rational[-19, 16], Rational[27, 16]}, {
+       Rational[-19, 16], Rational[7, 4]}, {
+       Rational[-9, 8], Rational[7, 4]}, {
+       Rational[-9, 8], Rational[29, 16]}, {
+       Rational[-17, 16], Rational[29, 16]}, {-1, Rational[29, 16]}, {-1, 
+        Rational[7, 4]}, {Rational[-17, 16], Rational[7, 4]}, {
+       Rational[-17, 16], Rational[29, 16]}, {
+       Rational[-17, 16], Rational[15, 8]}, {-1, Rational[15, 8]}, {-1, 
+        Rational[31, 16]}, {Rational[-15, 16], Rational[31, 16]}, {
+       Rational[-7, 8], Rational[31, 16]}, {
+       Rational[-7, 8], Rational[15, 8]}, {
+       Rational[-7, 8], Rational[31, 16]}, {
+       Rational[-13, 16], Rational[31, 16]}, {
+       Rational[-3, 4], Rational[31, 16]}, {
+       Rational[-3, 4], Rational[15, 8]}, {
+       Rational[-11, 16], Rational[15, 8]}, {
+       Rational[-11, 16], Rational[29, 16]}, {
+       Rational[-11, 16], Rational[7, 4]}, {
+       Rational[-3, 4], Rational[7, 4]}, {
+       Rational[-13, 16], Rational[7, 4]}, {
+       Rational[-13, 16], Rational[29, 16]}, {
+       Rational[-13, 16], Rational[15, 8]}, {
+       Rational[-3, 4], Rational[15, 8]}, {
+       Rational[-3, 4], Rational[31, 16]}, {
+       Rational[-11, 16], Rational[31, 16]}, {
+       Rational[-5, 8], Rational[31, 16]}, {
+       Rational[-5, 8], Rational[15, 8]}, {
+       Rational[-5, 8], Rational[31, 16]}, {
+       Rational[-9, 16], Rational[31, 16]}, {
+       Rational[-1, 2], Rational[31, 16]}, {
+       Rational[-1, 2], Rational[15, 8]}, {
+       Rational[-7, 16], Rational[15, 8]}, {
+       Rational[-7, 16], Rational[29, 16]}, {
+       Rational[-7, 16], Rational[7, 4]}, {Rational[-1, 2], Rational[7, 4]}, {
+       Rational[-1, 2], Rational[29, 16]}, {
+       Rational[-7, 16], Rational[29, 16]}, {
+       Rational[-3, 8], Rational[29, 16]}, {
+       Rational[-3, 8], Rational[7, 4]}, {Rational[-5, 16], Rational[7, 4]}, {
+       Rational[-5, 16], Rational[27, 16]}, {
+       Rational[-5, 16], Rational[13, 8]}, {
+       Rational[-3, 8], Rational[13, 8]}, {
+       Rational[-5, 16], Rational[13, 8]}, {
+       Rational[-5, 16], Rational[25, 16]}, {
+       Rational[-5, 16], Rational[3, 2]}, {Rational[-3, 8], Rational[3, 2]}, {
+       Rational[-3, 8], Rational[23, 16]}, {
+       Rational[-7, 16], Rational[23, 16]}, {
+       Rational[-1, 2], Rational[23, 16]}, {
+       Rational[-1, 2], Rational[3, 2]}, {
+       Rational[-1, 2], Rational[23, 16]}, {
+       Rational[-9, 16], Rational[23, 16]}, {
+       Rational[-5, 8], Rational[23, 16]}, {
+       Rational[-5, 8], Rational[3, 2]}, {
+       Rational[-11, 16], Rational[3, 2]}, {
+       Rational[-11, 16], Rational[25, 16]}, {
+       Rational[-11, 16], Rational[13, 8]}, {
+       Rational[-5, 8], Rational[13, 8]}, {
+       Rational[-11, 16], Rational[13, 8]}, {
+       Rational[-11, 16], Rational[27, 16]}, {
+       Rational[-11, 16], Rational[7, 4]}, {
+       Rational[-5, 8], Rational[7, 4]}, {
+       Rational[-5, 8], Rational[29, 16]}, {
+       Rational[-9, 16], Rational[29, 16]}, {
+       Rational[-1, 2], Rational[29, 16]}, {
+       Rational[-1, 2], Rational[7, 4]}, {Rational[-9, 16], Rational[7, 4]}, {
+       Rational[-9, 16], Rational[29, 16]}, {
+       Rational[-9, 16], Rational[15, 8]}, {
+       Rational[-1, 2], Rational[15, 8]}, {
+       Rational[-1, 2], Rational[31, 16]}, {
+       Rational[-7, 16], Rational[31, 16]}, {
+       Rational[-3, 8], Rational[31, 16]}, {
+       Rational[-3, 8], Rational[15, 8]}, {
+       Rational[-3, 8], Rational[31, 16]}, {
+       Rational[-5, 16], Rational[31, 16]}, {
+       Rational[-1, 4], Rational[31, 16]}, {
+       Rational[-1, 4], Rational[15, 8]}, {
+       Rational[-3, 16], Rational[15, 8]}, {
+       Rational[-3, 16], Rational[29, 16]}, {
+       Rational[-3, 16], Rational[7, 4]}, {Rational[-1, 4], Rational[7, 4]}, {
+       Rational[-5, 16], Rational[7, 4]}, {
+       Rational[-5, 16], Rational[29, 16]}, {
+       Rational[-5, 16], Rational[15, 8]}, {
+       Rational[-1, 4], Rational[15, 8]}, {
+       Rational[-1, 4], Rational[31, 16]}, {
+       Rational[-3, 16], Rational[31, 16]}, {
+       Rational[-1, 8], Rational[31, 16]}, {
+       Rational[-1, 8], Rational[15, 8]}, {
+       Rational[-1, 8], Rational[31, 16]}, {
+       Rational[-1, 16], Rational[31, 16]}, {0, Rational[31, 16]}, {
+       0, Rational[15, 8]}, {Rational[1, 16], Rational[15, 8]}, {
+       Rational[1, 16], Rational[29, 16]}, {
+       Rational[1, 16], Rational[7, 4]}, {0, Rational[7, 4]}, {
+       0, Rational[29, 16]}, {Rational[1, 16], Rational[29, 16]}, {
+       Rational[1, 8], Rational[29, 16]}, {Rational[1, 8], Rational[7, 4]}, {
+       Rational[3, 16], Rational[7, 4]}, {
+       Rational[3, 16], Rational[27, 16]}, {
+       Rational[3, 16], Rational[13, 8]}, {Rational[1, 8], Rational[13, 8]}, {
+       Rational[3, 16], Rational[13, 8]}, {
+       Rational[3, 16], Rational[25, 16]}, {
+       Rational[3, 16], Rational[3, 2]}, {Rational[1, 8], Rational[3, 2]}, {
+       Rational[1, 8], Rational[23, 16]}, {
+       Rational[1, 16], Rational[23, 16]}, {0, Rational[23, 16]}, {
+       0, Rational[3, 2]}, {Rational[-1, 16], Rational[3, 2]}, {
+       Rational[-1, 16], Rational[25, 16]}, {
+       Rational[-1, 16], Rational[13, 8]}, {0, Rational[13, 8]}, {
+       0, Rational[27, 16]}, {Rational[1, 16], Rational[27, 16]}, {
+       Rational[1, 8], Rational[27, 16]}, {Rational[1, 8], Rational[13, 8]}, {
+       Rational[1, 8], Rational[27, 16]}, {
+       Rational[3, 16], Rational[27, 16]}, {
+       Rational[1, 4], Rational[27, 16]}, {Rational[1, 4], Rational[13, 8]}, {
+       Rational[5, 16], Rational[13, 8]}, {
+       Rational[5, 16], Rational[25, 16]}, {
+       Rational[5, 16], Rational[3, 2]}, {Rational[1, 4], Rational[3, 2]}, {
+       Rational[1, 4], Rational[25, 16]}, {
+       Rational[5, 16], Rational[25, 16]}, {
+       Rational[3, 8], Rational[25, 16]}, {Rational[3, 8], Rational[3, 2]}, {
+       Rational[7, 16], Rational[3, 2]}, {
+       Rational[7, 16], Rational[23, 16]}, {
+       Rational[7, 16], Rational[11, 8]}, {Rational[3, 8], Rational[11, 8]}, {
+       Rational[7, 16], Rational[11, 8]}, {
+       Rational[7, 16], Rational[21, 16]}, {
+       Rational[7, 16], Rational[5, 4]}, {Rational[3, 8], Rational[5, 4]}, {
+       Rational[3, 8], Rational[19, 16]}, {
+       Rational[5, 16], Rational[19, 16]}, {
+       Rational[1, 4], Rational[19, 16]}, {Rational[1, 4], Rational[5, 4]}, {
+       Rational[1, 4], Rational[21, 16]}, {
+       Rational[5, 16], Rational[21, 16]}, {
+       Rational[3, 8], Rational[21, 16]}, {Rational[3, 8], Rational[5, 4]}, {
+       Rational[7, 16], Rational[5, 4]}, {
+       Rational[7, 16], Rational[19, 16]}, {
+       Rational[7, 16], Rational[9, 8]}, {Rational[3, 8], Rational[9, 8]}, {
+       Rational[7, 16], Rational[9, 8]}, {
+       Rational[7, 16], Rational[17, 16]}, {Rational[7, 16], 1}, {
+       Rational[3, 8], 1}, {Rational[3, 8], Rational[15, 16]}, {
+       Rational[5, 16], Rational[15, 16]}, {
+       Rational[1, 4], Rational[15, 16]}, {Rational[1, 4], 1}, {
+       Rational[5, 16], 1}, {Rational[5, 16], Rational[15, 16]}, {
+       Rational[5, 16], Rational[7, 8]}, {Rational[1, 4], Rational[7, 8]}, {
+       Rational[1, 4], Rational[13, 16]}, {
+       Rational[3, 16], Rational[13, 16]}, {
+       Rational[1, 8], Rational[13, 16]}, {Rational[1, 8], Rational[7, 8]}, {
+       Rational[1, 8], Rational[13, 16]}, {
+       Rational[1, 16], Rational[13, 16]}, {0, Rational[13, 16]}, {
+       0, Rational[7, 8]}, {Rational[-1, 16], Rational[7, 8]}, {
+       Rational[-1, 16], Rational[15, 16]}, {Rational[-1, 16], 1}, {0, 1}, {
+       Rational[1, 16], 1}, {Rational[1, 16], Rational[15, 16]}, {
+       Rational[1, 16], Rational[7, 8]}, {0, Rational[7, 8]}, {
+       0, Rational[13, 16]}, {Rational[-1, 16], Rational[13, 16]}, {
+       Rational[-1, 8], Rational[13, 16]}, {
+       Rational[-1, 8], Rational[7, 8]}, {
+       Rational[-1, 8], Rational[13, 16]}, {
+       Rational[-3, 16], Rational[13, 16]}, {
+       Rational[-1, 4], Rational[13, 16]}, {
+       Rational[-1, 4], Rational[7, 8]}, {Rational[-5, 16], Rational[7, 8]}, {
+       Rational[-5, 16], Rational[15, 16]}, {Rational[-5, 16], 1}, {
+       Rational[-1, 4], 1}, {Rational[-1, 4], Rational[15, 16]}, {
+       Rational[-5, 16], Rational[15, 16]}, {
+       Rational[-3, 8], Rational[15, 16]}, {Rational[-3, 8], 1}, {
+       Rational[-7, 16], 1}, {Rational[-7, 16], Rational[17, 16]}, {
+       Rational[-7, 16], Rational[9, 8]}, {Rational[-3, 8], Rational[9, 8]}, {
+       Rational[-7, 16], Rational[9, 8]}, {
+       Rational[-7, 16], Rational[19, 16]}, {
+       Rational[-7, 16], Rational[5, 4]}, {Rational[-3, 8], Rational[5, 4]}, {
+       Rational[-3, 8], Rational[21, 16]}, {
+       Rational[-5, 16], Rational[21, 16]}, {
+       Rational[-1, 4], Rational[21, 16]}, {
+       Rational[-1, 4], Rational[5, 4]}, {
+       Rational[-1, 4], Rational[19, 16]}, {
+       Rational[-5, 16], Rational[19, 16]}, {
+       Rational[-3, 8], Rational[19, 16]}, {
+       Rational[-3, 8], Rational[5, 4]}, {Rational[-7, 16], Rational[5, 4]}, {
+       Rational[-7, 16], Rational[21, 16]}, {
+       Rational[-7, 16], Rational[11, 8]}, {
+       Rational[-3, 8], Rational[11, 8]}, {
+       Rational[-7, 16], Rational[11, 8]}, {
+       Rational[-7, 16], Rational[23, 16]}, {
+       Rational[-7, 16], Rational[3, 2]}, {Rational[-3, 8], Rational[3, 2]}, {
+       Rational[-3, 8], Rational[25, 16]}, {
+       Rational[-5, 16], Rational[25, 16]}, {
+       Rational[-1, 4], Rational[25, 16]}, {
+       Rational[-1, 4], Rational[3, 2]}, {Rational[-5, 16], Rational[3, 2]}, {
+       Rational[-5, 16], Rational[25, 16]}, {
+       Rational[-5, 16], Rational[13, 8]}, {
+       Rational[-1, 4], Rational[13, 8]}, {
+       Rational[-1, 4], Rational[27, 16]}, {
+       Rational[-3, 16], Rational[27, 16]}, {
+       Rational[-1, 8], Rational[27, 16]}, {
+       Rational[-1, 8], Rational[13, 8]}, {
+       Rational[-1, 8], Rational[27, 16]}, {
+       Rational[-1, 16], Rational[27, 16]}, {0, Rational[27, 16]}, {
+       0, Rational[13, 8]}, {Rational[1, 16], Rational[13, 8]}, {
+       Rational[1, 16], Rational[25, 16]}, {
+       Rational[1, 16], Rational[3, 2]}, {0, Rational[3, 2]}, {
+       0, Rational[23, 16]}, {Rational[-1, 16], Rational[23, 16]}, {
+       Rational[-1, 8], Rational[23, 16]}, {
+       Rational[-1, 8], Rational[3, 2]}, {Rational[-3, 16], Rational[3, 2]}, {
+       Rational[-3, 16], Rational[25, 16]}, {
+       Rational[-3, 16], Rational[13, 8]}, {
+       Rational[-1, 8], Rational[13, 8]}, {
+       Rational[-3, 16], Rational[13, 8]}, {
+       Rational[-3, 16], Rational[27, 16]}, {
+       Rational[-3, 16], Rational[7, 4]}, {Rational[-1, 8], Rational[7, 4]}, {
+       Rational[-1, 8], Rational[29, 16]}, {
+       Rational[-1, 16], Rational[29, 16]}, {0, Rational[29, 16]}, {
+       0, Rational[7, 4]}, {Rational[-1, 16], Rational[7, 4]}, {
+       Rational[-1, 16], Rational[29, 16]}, {
+       Rational[-1, 16], Rational[15, 8]}, {0, Rational[15, 8]}, {
+       0, Rational[31, 16]}, {Rational[1, 16], Rational[31, 16]}, {
+       Rational[1, 8], Rational[31, 16]}, {Rational[1, 8], Rational[15, 8]}, {
+       Rational[1, 8], Rational[31, 16]}, {
+       Rational[3, 16], Rational[31, 16]}, {
+       Rational[1, 4], Rational[31, 16]}, {Rational[1, 4], Rational[15, 8]}, {
+       Rational[5, 16], Rational[15, 8]}, {
+       Rational[5, 16], Rational[29, 16]}, {
+       Rational[5, 16], Rational[7, 4]}, {Rational[1, 4], Rational[7, 4]}, {
+       Rational[3, 16], Rational[7, 4]}, {
+       Rational[3, 16], Rational[29, 16]}, {
+       Rational[3, 16], Rational[15, 8]}, {Rational[1, 4], Rational[15, 8]}, {
+       Rational[1, 4], Rational[31, 16]}, {
+       Rational[5, 16], Rational[31, 16]}, {
+       Rational[3, 8], Rational[31, 16]}, {Rational[3, 8], Rational[15, 8]}, {
+       Rational[3, 8], Rational[31, 16]}, {
+       Rational[7, 16], Rational[31, 16]}, {
+       Rational[1, 2], Rational[31, 16]}, {Rational[1, 2], Rational[15, 8]}, {
+       Rational[9, 16], Rational[15, 8]}, {
+       Rational[9, 16], Rational[29, 16]}, {
+       Rational[9, 16], Rational[7, 4]}, {Rational[1, 2], Rational[7, 4]}, {
+       Rational[1, 2], Rational[29, 16]}, {
+       Rational[9, 16], Rational[29, 16]}, {
+       Rational[5, 8], Rational[29, 16]}, {Rational[5, 8], Rational[7, 4]}, {
+       Rational[11, 16], Rational[7, 4]}, {
+       Rational[11, 16], Rational[27, 16]}, {
+       Rational[11, 16], Rational[13, 8]}, {
+       Rational[5, 8], Rational[13, 8]}, {
+       Rational[11, 16], Rational[13, 8]}, {
+       Rational[11, 16], Rational[25, 16]}, {
+       Rational[11, 16], Rational[3, 2]}, {Rational[5, 8], Rational[3, 2]}, {
+       Rational[5, 8], Rational[23, 16]}, {
+       Rational[9, 16], Rational[23, 16]}, {
+       Rational[1, 2], Rational[23, 16]}, {Rational[1, 2], Rational[3, 2]}, {
+       Rational[1, 2], Rational[23, 16]}, {
+       Rational[7, 16], Rational[23, 16]}, {
+       Rational[3, 8], Rational[23, 16]}, {Rational[3, 8], Rational[3, 2]}, {
+       Rational[5, 16], Rational[3, 2]}, {
+       Rational[5, 16], Rational[25, 16]}, {
+       Rational[5, 16], Rational[13, 8]}, {Rational[3, 8], Rational[13, 8]}, {
+       Rational[5, 16], Rational[13, 8]}, {
+       Rational[5, 16], Rational[27, 16]}, {
+       Rational[5, 16], Rational[7, 4]}, {Rational[3, 8], Rational[7, 4]}, {
+       Rational[3, 8], Rational[29, 16]}, {
+       Rational[7, 16], Rational[29, 16]}, {
+       Rational[1, 2], Rational[29, 16]}, {Rational[1, 2], Rational[7, 4]}, {
+       Rational[7, 16], Rational[7, 4]}, {
+       Rational[7, 16], Rational[29, 16]}, {
+       Rational[7, 16], Rational[15, 8]}, {Rational[1, 2], Rational[15, 8]}, {
+       Rational[1, 2], Rational[31, 16]}, {
+       Rational[9, 16], Rational[31, 16]}, {
+       Rational[5, 8], Rational[31, 16]}, {Rational[5, 8], Rational[15, 8]}, {
+       Rational[5, 8], Rational[31, 16]}, {
+       Rational[11, 16], Rational[31, 16]}, {
+       Rational[3, 4], Rational[31, 16]}, {Rational[3, 4], Rational[15, 8]}, {
+       Rational[13, 16], Rational[15, 8]}, {
+       Rational[13, 16], Rational[29, 16]}, {
+       Rational[13, 16], Rational[7, 4]}, {Rational[3, 4], Rational[7, 4]}, {
+       Rational[11, 16], Rational[7, 4]}, {
+       Rational[11, 16], Rational[29, 16]}, {
+       Rational[11, 16], Rational[15, 8]}, {
+       Rational[3, 4], Rational[15, 8]}, {Rational[3, 4], Rational[31, 16]}, {
+       Rational[13, 16], Rational[31, 16]}, {
+       Rational[7, 8], Rational[31, 16]}, {Rational[7, 8], Rational[15, 8]}, {
+       Rational[7, 8], Rational[31, 16]}, {
+       Rational[15, 16], Rational[31, 16]}, {1, Rational[31, 16]}, {
+       1, Rational[15, 8]}, {Rational[17, 16], Rational[15, 8]}, {
+       Rational[17, 16], Rational[29, 16]}, {
+       Rational[17, 16], Rational[7, 4]}, {1, Rational[7, 4]}, {
+       1, Rational[29, 16]}, {Rational[17, 16], Rational[29, 16]}, {
+       Rational[9, 8], Rational[29, 16]}, {Rational[9, 8], Rational[7, 4]}, {
+       Rational[19, 16], Rational[7, 4]}, {
+       Rational[19, 16], Rational[27, 16]}, {
+       Rational[19, 16], Rational[13, 8]}, {
+       Rational[9, 8], Rational[13, 8]}, {
+       Rational[19, 16], Rational[13, 8]}, {
+       Rational[19, 16], Rational[25, 16]}, {
+       Rational[19, 16], Rational[3, 2]}, {Rational[9, 8], Rational[3, 2]}, {
+       Rational[9, 8], Rational[23, 16]}, {
+       Rational[17, 16], Rational[23, 16]}, {1, Rational[23, 16]}, {
+       1, Rational[3, 2]}, {Rational[15, 16], Rational[3, 2]}, {
+       Rational[15, 16], Rational[25, 16]}, {
+       Rational[15, 16], Rational[13, 8]}, {1, Rational[13, 8]}, {
+       1, Rational[27, 16]}, {Rational[17, 16], Rational[27, 16]}, {
+       Rational[9, 8], Rational[27, 16]}, {Rational[9, 8], Rational[13, 8]}, {
+       Rational[9, 8], Rational[27, 16]}, {
+       Rational[19, 16], Rational[27, 16]}, {
+       Rational[5, 4], Rational[27, 16]}, {Rational[5, 4], Rational[13, 8]}, {
+       Rational[21, 16], Rational[13, 8]}, {
+       Rational[21, 16], Rational[25, 16]}, {
+       Rational[21, 16], Rational[3, 2]}, {Rational[5, 4], Rational[3, 2]}, {
+       Rational[5, 4], Rational[25, 16]}, {
+       Rational[21, 16], Rational[25, 16]}, {
+       Rational[11, 8], Rational[25, 16]}, {
+       Rational[11, 8], Rational[3, 2]}, {Rational[23, 16], Rational[3, 2]}, {
+       Rational[23, 16], Rational[23, 16]}, {
+       Rational[23, 16], Rational[11, 8]}, {
+       Rational[11, 8], Rational[11, 8]}, {
+       Rational[23, 16], Rational[11, 8]}, {
+       Rational[23, 16], Rational[21, 16]}, {
+       Rational[23, 16], Rational[5, 4]}, {Rational[11, 8], Rational[5, 4]}, {
+       Rational[11, 8], Rational[19, 16]}, {
+       Rational[21, 16], Rational[19, 16]}, {
+       Rational[5, 4], Rational[19, 16]}, {Rational[5, 4], Rational[5, 4]}, {
+       Rational[5, 4], Rational[21, 16]}, {
+       Rational[21, 16], Rational[21, 16]}, {
+       Rational[11, 8], Rational[21, 16]}, {
+       Rational[11, 8], Rational[5, 4]}, {Rational[23, 16], Rational[5, 4]}, {
+       Rational[23, 16], Rational[19, 16]}, {
+       Rational[23, 16], Rational[9, 8]}, {Rational[11, 8], Rational[9, 8]}, {
+       Rational[23, 16], Rational[9, 8]}, {
+       Rational[23, 16], Rational[17, 16]}, {Rational[23, 16], 1}, {
+       Rational[11, 8], 1}, {Rational[11, 8], Rational[15, 16]}, {
+       Rational[21, 16], Rational[15, 16]}, {
+       Rational[5, 4], Rational[15, 16]}, {Rational[5, 4], 1}, {
+       Rational[21, 16], 1}, {Rational[21, 16], Rational[15, 16]}, {
+       Rational[21, 16], Rational[7, 8]}, {Rational[5, 4], Rational[7, 8]}, {
+       Rational[5, 4], Rational[13, 16]}, {
+       Rational[19, 16], Rational[13, 16]}, {
+       Rational[9, 8], Rational[13, 16]}, {Rational[9, 8], Rational[7, 8]}, {
+       Rational[9, 8], Rational[13, 16]}, {
+       Rational[17, 16], Rational[13, 16]}, {1, Rational[13, 16]}, {
+       1, Rational[7, 8]}, {Rational[15, 16], Rational[7, 8]}, {
+       Rational[15, 16], Rational[15, 16]}, {Rational[15, 16], 1}, {1, 1}, {
+       1, Rational[15, 16]}, {Rational[15, 16], Rational[15, 16]}, {
+       Rational[7, 8], Rational[15, 16]}, {Rational[7, 8], 1}, {
+       Rational[13, 16], 1}, {Rational[13, 16], Rational[17, 16]}, {
+       Rational[13, 16], Rational[9, 8]}, {Rational[7, 8], Rational[9, 8]}, {
+       Rational[13, 16], Rational[9, 8]}, {
+       Rational[13, 16], Rational[19, 16]}, {
+       Rational[13, 16], Rational[5, 4]}, {Rational[7, 8], Rational[5, 4]}, {
+       Rational[7, 8], Rational[21, 16]}, {
+       Rational[15, 16], Rational[21, 16]}, {1, Rational[21, 16]}, {
+       1, Rational[5, 4]}, {Rational[15, 16], Rational[5, 4]}, {
+       Rational[15, 16], Rational[21, 16]}, {
+       Rational[15, 16], Rational[11, 8]}, {1, Rational[11, 8]}, {
+       1, Rational[23, 16]}, {Rational[17, 16], Rational[23, 16]}, {
+       Rational[9, 8], Rational[23, 16]}, {Rational[9, 8], Rational[11, 8]}, {
+       Rational[9, 8], Rational[23, 16]}, {
+       Rational[19, 16], Rational[23, 16]}, {
+       Rational[5, 4], Rational[23, 16]}, {Rational[5, 4], Rational[11, 8]}, {
+       Rational[21, 16], Rational[11, 8]}, {
+       Rational[21, 16], Rational[21, 16]}, {
+       Rational[21, 16], Rational[5, 4]}, {Rational[5, 4], Rational[5, 4]}, {
+       Rational[19, 16], Rational[5, 4]}, {
+       Rational[19, 16], Rational[21, 16]}, {
+       Rational[19, 16], Rational[11, 8]}, {
+       Rational[5, 4], Rational[11, 8]}, {Rational[5, 4], Rational[23, 16]}, {
+       Rational[21, 16], Rational[23, 16]}, {
+       Rational[11, 8], Rational[23, 16]}, {
+       Rational[11, 8], Rational[11, 8]}, {
+       Rational[11, 8], Rational[23, 16]}, {
+       Rational[23, 16], Rational[23, 16]}, {
+       Rational[3, 2], Rational[23, 16]}, {Rational[3, 2], Rational[11, 8]}, {
+       Rational[25, 16], Rational[11, 8]}, {
+       Rational[25, 16], Rational[21, 16]}, {
+       Rational[25, 16], Rational[5, 4]}, {Rational[3, 2], Rational[5, 4]}, {
+       Rational[3, 2], Rational[21, 16]}, {
+       Rational[25, 16], Rational[21, 16]}, {
+       Rational[13, 8], Rational[21, 16]}, {
+       Rational[13, 8], Rational[5, 4]}, {Rational[27, 16], Rational[5, 4]}, {
+       Rational[27, 16], Rational[19, 16]}, {
+       Rational[27, 16], Rational[9, 8]}, {Rational[13, 8], Rational[9, 8]}, {
+       Rational[27, 16], Rational[9, 8]}, {
+       Rational[27, 16], Rational[17, 16]}, {Rational[27, 16], 1}, {
+       Rational[13, 8], 1}, {Rational[13, 8], Rational[15, 16]}, {
+       Rational[25, 16], Rational[15, 16]}, {
+       Rational[3, 2], Rational[15, 16]}, {Rational[3, 2], 1}, {
+       Rational[23, 16], 1}, {Rational[23, 16], Rational[17, 16]}, {
+       Rational[23, 16], Rational[9, 8]}, {Rational[3, 2], Rational[9, 8]}, {
+       Rational[3, 2], Rational[19, 16]}, {
+       Rational[25, 16], Rational[19, 16]}, {
+       Rational[13, 8], Rational[19, 16]}, {
+       Rational[13, 8], Rational[9, 8]}, {
+       Rational[13, 8], Rational[19, 16]}, {
+       Rational[27, 16], Rational[19, 16]}, {
+       Rational[7, 4], Rational[19, 16]}, {Rational[7, 4], Rational[9, 8]}, {
+       Rational[29, 16], Rational[9, 8]}, {
+       Rational[29, 16], Rational[17, 16]}, {Rational[29, 16], 1}, {
+       Rational[7, 4], 1}, {Rational[7, 4], Rational[17, 16]}, {
+       Rational[29, 16], Rational[17, 16]}, {
+       Rational[15, 8], Rational[17, 16]}, {Rational[15, 8], 1}, {
+       Rational[31, 16], 1}, {Rational[31, 16], Rational[15, 16]}, {
+       Rational[31, 16], Rational[7, 8]}, {Rational[15, 8], Rational[7, 8]}, {
+       Rational[31, 16], Rational[7, 8]}, {
+       Rational[31, 16], Rational[13, 16]}, {
+       Rational[31, 16], Rational[3, 4]}, {Rational[15, 8], Rational[3, 4]}, {
+       Rational[15, 8], Rational[11, 16]}, {
+       Rational[29, 16], Rational[11, 16]}, {
+       Rational[7, 4], Rational[11, 16]}, {Rational[7, 4], Rational[3, 4]}, {
+       Rational[7, 4], Rational[13, 16]}, {
+       Rational[29, 16], Rational[13, 16]}, {
+       Rational[15, 8], Rational[13, 16]}, {
+       Rational[15, 8], Rational[3, 4]}, {Rational[31, 16], Rational[3, 4]}, {
+       Rational[31, 16], Rational[11, 16]}, {
+       Rational[31, 16], Rational[5, 8]}, {Rational[15, 8], Rational[5, 8]}, {
+       Rational[31, 16], Rational[5, 8]}, {
+       Rational[31, 16], Rational[9, 16]}, {
+       Rational[31, 16], Rational[1, 2]}, {Rational[15, 8], Rational[1, 2]}, {
+       Rational[15, 8], Rational[7, 16]}, {
+       Rational[29, 16], Rational[7, 16]}, {
+       Rational[7, 4], Rational[7, 16]}, {Rational[7, 4], Rational[1, 2]}, {
+       Rational[29, 16], Rational[1, 2]}, {
+       Rational[29, 16], Rational[7, 16]}, {
+       Rational[29, 16], Rational[3, 8]}, {Rational[7, 4], Rational[3, 8]}, {
+       Rational[7, 4], Rational[5, 16]}, {
+       Rational[27, 16], Rational[5, 16]}, {
+       Rational[13, 8], Rational[5, 16]}, {Rational[13, 8], Rational[3, 8]}, {
+       Rational[13, 8], Rational[5, 16]}, {
+       Rational[25, 16], Rational[5, 16]}, {
+       Rational[3, 2], Rational[5, 16]}, {Rational[3, 2], Rational[3, 8]}, {
+       Rational[23, 16], Rational[3, 8]}, {
+       Rational[23, 16], Rational[7, 16]}, {
+       Rational[23, 16], Rational[1, 2]}, {Rational[3, 2], Rational[1, 2]}, {
+       Rational[23, 16], Rational[1, 2]}, {
+       Rational[23, 16], Rational[9, 16]}, {
+       Rational[23, 16], Rational[5, 8]}, {Rational[3, 2], Rational[5, 8]}, {
+       Rational[3, 2], Rational[11, 16]}, {
+       Rational[25, 16], Rational[11, 16]}, {
+       Rational[13, 8], Rational[11, 16]}, {
+       Rational[13, 8], Rational[5, 8]}, {
+       Rational[13, 8], Rational[11, 16]}, {
+       Rational[27, 16], Rational[11, 16]}, {
+       Rational[7, 4], Rational[11, 16]}, {Rational[7, 4], Rational[5, 8]}, {
+       Rational[29, 16], Rational[5, 8]}, {
+       Rational[29, 16], Rational[9, 16]}, {
+       Rational[29, 16], Rational[1, 2]}, {Rational[7, 4], Rational[1, 2]}, {
+       Rational[7, 4], Rational[9, 16]}, {
+       Rational[29, 16], Rational[9, 16]}, {
+       Rational[15, 8], Rational[9, 16]}, {Rational[15, 8], Rational[1, 2]}, {
+       Rational[31, 16], Rational[1, 2]}, {
+       Rational[31, 16], Rational[7, 16]}, {
+       Rational[31, 16], Rational[3, 8]}, {Rational[15, 8], Rational[3, 8]}, {
+       Rational[31, 16], Rational[3, 8]}, {
+       Rational[31, 16], Rational[5, 16]}, {
+       Rational[31, 16], Rational[1, 4]}, {Rational[15, 8], Rational[1, 4]}, {
+       Rational[15, 8], Rational[3, 16]}, {
+       Rational[29, 16], Rational[3, 16]}, {
+       Rational[7, 4], Rational[3, 16]}, {Rational[7, 4], Rational[1, 4]}, {
+       Rational[7, 4], Rational[5, 16]}, {
+       Rational[29, 16], Rational[5, 16]}, {
+       Rational[15, 8], Rational[5, 16]}, {Rational[15, 8], Rational[1, 4]}, {
+       Rational[31, 16], Rational[1, 4]}, {
+       Rational[31, 16], Rational[3, 16]}, {
+       Rational[31, 16], Rational[1, 8]}, {Rational[15, 8], Rational[1, 8]}, {
+       Rational[31, 16], Rational[1, 8]}, {
+       Rational[31, 16], Rational[1, 16]}, {Rational[31, 16], 0}, {
+       Rational[15, 8], 0}, {Rational[15, 8], Rational[-1, 16]}, {
+       Rational[29, 16], Rational[-1, 16]}, {
+       Rational[7, 4], Rational[-1, 16]}, {Rational[7, 4], 0}, {
+       Rational[29, 16], 0}, {Rational[29, 16], Rational[-1, 16]}, {
+       Rational[29, 16], Rational[-1, 8]}, {
+       Rational[7, 4], Rational[-1, 8]}, {Rational[7, 4], Rational[-3, 16]}, {
+       Rational[27, 16], Rational[-3, 16]}, {
+       Rational[13, 8], Rational[-3, 16]}, {
+       Rational[13, 8], Rational[-1, 8]}, {
+       Rational[13, 8], Rational[-3, 16]}, {
+       Rational[25, 16], Rational[-3, 16]}, {
+       Rational[3, 2], Rational[-3, 16]}, {Rational[3, 2], Rational[-1, 8]}, {
+       Rational[23, 16], Rational[-1, 8]}, {
+       Rational[23, 16], Rational[-1, 16]}, {Rational[23, 16], 0}, {
+       Rational[3, 2], 0}, {Rational[3, 2], Rational[1, 16]}, {
+       Rational[25, 16], Rational[1, 16]}, {
+       Rational[13, 8], Rational[1, 16]}, {Rational[13, 8], 0}, {
+       Rational[27, 16], 0}, {Rational[27, 16], Rational[-1, 16]}, {
+       Rational[27, 16], Rational[-1, 8]}, {
+       Rational[13, 8], Rational[-1, 8]}, {
+       Rational[27, 16], Rational[-1, 8]}, {
+       Rational[27, 16], Rational[-3, 16]}, {
+       Rational[27, 16], Rational[-1, 4]}, {
+       Rational[13, 8], Rational[-1, 4]}, {
+       Rational[13, 8], Rational[-5, 16]}, {
+       Rational[25, 16], Rational[-5, 16]}, {
+       Rational[3, 2], Rational[-5, 16]}, {Rational[3, 2], Rational[-1, 4]}, {
+       Rational[25, 16], Rational[-1, 4]}, {
+       Rational[25, 16], Rational[-5, 16]}, {
+       Rational[25, 16], Rational[-3, 8]}, {
+       Rational[3, 2], Rational[-3, 8]}, {Rational[3, 2], Rational[-7, 16]}, {
+       Rational[23, 16], Rational[-7, 16]}, {
+       Rational[11, 8], Rational[-7, 16]}, {
+       Rational[11, 8], Rational[-3, 8]}, {
+       Rational[11, 8], Rational[-7, 16]}, {
+       Rational[21, 16], Rational[-7, 16]}, {
+       Rational[5, 4], Rational[-7, 16]}, {Rational[5, 4], Rational[-3, 8]}, {
+       Rational[19, 16], Rational[-3, 8]}, {
+       Rational[19, 16], Rational[-5, 16]}, {
+       Rational[19, 16], Rational[-1, 4]}, {
+       Rational[5, 4], Rational[-1, 4]}, {
+       Rational[21, 16], Rational[-1, 4]}, {
+       Rational[21, 16], Rational[-5, 16]}, {
+       Rational[21, 16], Rational[-3, 8]}, {
+       Rational[5, 4], Rational[-3, 8]}, {Rational[5, 4], Rational[-7, 16]}, {
+       Rational[19, 16], Rational[-7, 16]}, {
+       Rational[9, 8], Rational[-7, 16]}, {Rational[9, 8], Rational[-3, 8]}, {
+       Rational[9, 8], Rational[-7, 16]}, {
+       Rational[17, 16], Rational[-7, 16]}, {1, Rational[-7, 16]}, {
+       1, Rational[-3, 8]}, {Rational[15, 16], Rational[-3, 8]}, {
+       Rational[15, 16], Rational[-5, 16]}, {
+       Rational[15, 16], Rational[-1, 4]}, {1, Rational[-1, 4]}, {
+       1, Rational[-5, 16]}, {Rational[15, 16], Rational[-5, 16]}, {
+       Rational[7, 8], Rational[-5, 16]}, {Rational[7, 8], Rational[-1, 4]}, {
+       Rational[13, 16], Rational[-1, 4]}, {
+       Rational[13, 16], Rational[-3, 16]}, {
+       Rational[13, 16], Rational[-1, 8]}, {
+       Rational[7, 8], Rational[-1, 8]}, {
+       Rational[13, 16], Rational[-1, 8]}, {
+       Rational[13, 16], Rational[-1, 16]}, {Rational[13, 16], 0}, {
+       Rational[7, 8], 0}, {Rational[7, 8], Rational[1, 16]}, {
+       Rational[15, 16], Rational[1, 16]}, {1, Rational[1, 16]}, {1, 
+       0}}, {{-1, 0}, {-1, 0.0625}, {-0.9375, 0.0625}, {-0.875, 
+       0.0625}, {-0.875, 0}, {-0.8125, 
+        0}, {-0.8125, -0.0625}, {-0.8125, -0.125}, {-0.875, -0.125}, \
+{-0.8125, -0.125}, {-0.8125, -0.1875}, {-0.8125, -0.25}, {-0.875, -0.25}, \
+{-0.875, -0.3125}, {-0.9375, -0.3125}, {-1, -0.3125}, {-1, -0.25}, {-0.9375, \
+-0.25}, {-0.9375, -0.3125}, {-0.9375, -0.375}, {-1, -0.375}, {-1, -0.4375}, \
+{-1.0625, -0.4375}, {-1.125, -0.4375}, {-1.125, -0.375}, {-1.125, -0.4375}, \
+{-1.1875, -0.4375}, {-1.25, -0.4375}, {-1.25, -0.375}, {-1.3125, -0.375}, \
+{-1.3125, -0.3125}, {-1.3125, -0.25}, {-1.25, -0.25}, {-1.1875, -0.25}, \
+{-1.1875, -0.3125}, {-1.1875, -0.375}, {-1.25, -0.375}, {-1.25, -0.4375}, \
+{-1.3125, -0.4375}, {-1.375, -0.4375}, {-1.375, -0.375}, {-1.375, -0.4375}, \
+{-1.4375, -0.4375}, {-1.5, -0.4375}, {-1.5, -0.375}, {-1.5625, -0.375}, \
+{-1.5625, -0.3125}, {-1.5625, -0.25}, {-1.5, -0.25}, {-1.5, -0.3125}, \
+{-1.5625, -0.3125}, {-1.625, -0.3125}, {-1.625, -0.25}, {-1.6875, -0.25}, \
+{-1.6875, -0.1875}, {-1.6875, -0.125}, {-1.625, -0.125}, {-1.6875, -0.125}, \
+{-1.6875, -0.0625}, {-1.6875, 0}, {-1.625, 0}, {-1.625, 0.0625}, {-1.5625, 
+       0.0625}, {-1.5, 
+       0.0625}, {-1.5, 0}, {-1.4375, 
+        0}, {-1.4375, -0.0625}, {-1.4375, -0.125}, {-1.5, -0.125}, {-1.5, \
+-0.1875}, {-1.5625, -0.1875}, {-1.625, -0.1875}, {-1.625, -0.125}, {-1.625, \
+-0.1875}, {-1.6875, -0.1875}, {-1.75, -0.1875}, {-1.75, -0.125}, {-1.8125, \
+-0.125}, {-1.8125, -0.0625}, {-1.8125, 0}, {-1.75, 
+        0}, {-1.75, -0.0625}, {-1.8125, -0.0625}, {-1.875, -0.0625}, {-1.875, 
+        0}, {-1.9375, 0}, {-1.9375, 0.0625}, {-1.9375, 0.125}, {-1.875, 
+       0.125}, {-1.9375, 0.125}, {-1.9375, 0.1875}, {-1.9375, 0.25}, {-1.875, 
+       0.25}, {-1.875, 0.3125}, {-1.8125, 0.3125}, {-1.75, 0.3125}, {-1.75, 
+       0.25}, {-1.75, 0.1875}, {-1.8125, 0.1875}, {-1.875, 0.1875}, {-1.875, 
+       0.25}, {-1.9375, 0.25}, {-1.9375, 0.3125}, {-1.9375, 0.375}, {-1.875, 
+       0.375}, {-1.9375, 0.375}, {-1.9375, 0.4375}, {-1.9375, 0.5}, {-1.875, 
+       0.5}, {-1.875, 0.5625}, {-1.8125, 0.5625}, {-1.75, 0.5625}, {-1.75, 
+       0.5}, {-1.8125, 0.5}, {-1.8125, 0.5625}, {-1.8125, 0.625}, {-1.75, 
+       0.625}, {-1.75, 0.6875}, {-1.6875, 0.6875}, {-1.625, 0.6875}, {-1.625, 
+       0.625}, {-1.625, 0.6875}, {-1.5625, 0.6875}, {-1.5, 0.6875}, {-1.5, 
+       0.625}, {-1.4375, 0.625}, {-1.4375, 0.5625}, {-1.4375, 0.5}, {-1.5, 
+       0.5}, {-1.4375, 0.5}, {-1.4375, 0.4375}, {-1.4375, 0.375}, {-1.5, 
+       0.375}, {-1.5, 0.3125}, {-1.5625, 0.3125}, {-1.625, 0.3125}, {-1.625, 
+       0.375}, {-1.625, 0.3125}, {-1.6875, 0.3125}, {-1.75, 0.3125}, {-1.75, 
+       0.375}, {-1.8125, 0.375}, {-1.8125, 0.4375}, {-1.8125, 0.5}, {-1.75, 
+       0.5}, {-1.75, 0.4375}, {-1.8125, 0.4375}, {-1.875, 0.4375}, {-1.875, 
+       0.5}, {-1.9375, 0.5}, {-1.9375, 0.5625}, {-1.9375, 0.625}, {-1.875, 
+       0.625}, {-1.9375, 0.625}, {-1.9375, 0.6875}, {-1.9375, 0.75}, {-1.875, 
+       0.75}, {-1.875, 0.8125}, {-1.8125, 0.8125}, {-1.75, 0.8125}, {-1.75, 
+       0.75}, {-1.75, 0.6875}, {-1.8125, 0.6875}, {-1.875, 0.6875}, {-1.875, 
+       0.75}, {-1.9375, 0.75}, {-1.9375, 0.8125}, {-1.9375, 0.875}, {-1.875, 
+       0.875}, {-1.9375, 0.875}, {-1.9375, 
+       0.9375}, {-1.9375, 1}, {-1.875, 1}, {-1.875, 1.0625}, {-1.8125, 
+       1.0625}, {-1.75, 1.0625}, {-1.75, 1}, {-1.8125, 1}, {-1.8125, 
+       1.0625}, {-1.8125, 1.125}, {-1.75, 1.125}, {-1.75, 1.1875}, {-1.6875, 
+       1.1875}, {-1.625, 1.1875}, {-1.625, 1.125}, {-1.625, 1.1875}, {-1.5625,
+        1.1875}, {-1.5, 1.1875}, {-1.5, 1.125}, {-1.4375, 1.125}, {-1.4375, 
+       1.0625}, {-1.4375, 1}, {-1.5, 1}, {-1.5, 0.9375}, {-1.5625, 
+       0.9375}, {-1.625, 0.9375}, {-1.625, 1}, {-1.6875, 1}, {-1.6875, 
+       1.0625}, {-1.6875, 1.125}, {-1.625, 1.125}, {-1.6875, 1.125}, {-1.6875,
+        1.1875}, {-1.6875, 1.25}, {-1.625, 1.25}, {-1.625, 1.3125}, {-1.5625, 
+       1.3125}, {-1.5, 1.3125}, {-1.5, 1.25}, {-1.5625, 1.25}, {-1.5625, 
+       1.3125}, {-1.5625, 1.375}, {-1.5, 1.375}, {-1.5, 1.4375}, {-1.4375, 
+       1.4375}, {-1.375, 1.4375}, {-1.375, 1.375}, {-1.375, 1.4375}, {-1.3125,
+        1.4375}, {-1.25, 1.4375}, {-1.25, 1.375}, {-1.1875, 1.375}, {-1.1875, 
+       1.3125}, {-1.1875, 1.25}, {-1.25, 1.25}, {-1.3125, 1.25}, {-1.3125, 
+       1.3125}, {-1.3125, 1.375}, {-1.25, 1.375}, {-1.25, 1.4375}, {-1.1875, 
+       1.4375}, {-1.125, 1.4375}, {-1.125, 1.375}, {-1.125, 1.4375}, {-1.0625,
+        1.4375}, {-1, 1.4375}, {-1, 1.375}, {-0.9375, 1.375}, {-0.9375, 
+       1.3125}, {-0.9375, 1.25}, {-1, 1.25}, {-1, 1.3125}, {-0.9375, 
+       1.3125}, {-0.875, 1.3125}, {-0.875, 1.25}, {-0.8125, 1.25}, {-0.8125, 
+       1.1875}, {-0.8125, 1.125}, {-0.875, 1.125}, {-0.8125, 1.125}, {-0.8125,
+        1.0625}, {-0.8125, 1}, {-0.875, 1}, {-0.875, 0.9375}, {-0.9375, 
+       0.9375}, {-1, 0.9375}, {-1, 1}, {-0.9375, 1}, {-0.9375, 
+       0.9375}, {-0.9375, 0.875}, {-1, 0.875}, {-1, 0.8125}, {-1.0625, 
+       0.8125}, {-1.125, 0.8125}, {-1.125, 0.875}, {-1.125, 0.8125}, {-1.1875,
+        0.8125}, {-1.25, 0.8125}, {-1.25, 0.875}, {-1.3125, 0.875}, {-1.3125, 
+       0.9375}, {-1.3125, 1}, {-1.25, 1}, {-1.25, 0.9375}, {-1.3125, 
+       0.9375}, {-1.375, 0.9375}, {-1.375, 1}, {-1.4375, 1}, {-1.4375, 
+       1.0625}, {-1.4375, 1.125}, {-1.375, 1.125}, {-1.4375, 1.125}, {-1.4375,
+        1.1875}, {-1.4375, 1.25}, {-1.375, 1.25}, {-1.375, 1.3125}, {-1.3125, 
+       1.3125}, {-1.25, 1.3125}, {-1.25, 1.25}, {-1.25, 1.1875}, {-1.3125, 
+       1.1875}, {-1.375, 1.1875}, {-1.375, 1.25}, {-1.4375, 1.25}, {-1.4375, 
+       1.3125}, {-1.4375, 1.375}, {-1.375, 1.375}, {-1.4375, 1.375}, {-1.4375,
+        1.4375}, {-1.4375, 1.5}, {-1.375, 1.5}, {-1.375, 1.5625}, {-1.3125, 
+       1.5625}, {-1.25, 1.5625}, {-1.25, 1.5}, {-1.3125, 1.5}, {-1.3125, 
+       1.5625}, {-1.3125, 1.625}, {-1.25, 1.625}, {-1.25, 1.6875}, {-1.1875, 
+       1.6875}, {-1.125, 1.6875}, {-1.125, 1.625}, {-1.125, 1.6875}, {-1.0625,
+        1.6875}, {-1, 1.6875}, {-1, 1.625}, {-0.9375, 1.625}, {-0.9375, 
+       1.5625}, {-0.9375, 1.5}, {-1, 1.5}, {-1, 1.4375}, {-1.0625, 
+       1.4375}, {-1.125, 1.4375}, {-1.125, 1.5}, {-1.1875, 1.5}, {-1.1875, 
+       1.5625}, {-1.1875, 1.625}, {-1.125, 1.625}, {-1.1875, 1.625}, {-1.1875,
+        1.6875}, {-1.1875, 1.75}, {-1.125, 1.75}, {-1.125, 1.8125}, {-1.0625, 
+       1.8125}, {-1, 1.8125}, {-1, 1.75}, {-1.0625, 1.75}, {-1.0625, 
+       1.8125}, {-1.0625, 1.875}, {-1, 1.875}, {-1, 1.9375}, {-0.9375, 
+       1.9375}, {-0.875, 1.9375}, {-0.875, 1.875}, {-0.875, 1.9375}, {-0.8125,
+        1.9375}, {-0.75, 1.9375}, {-0.75, 1.875}, {-0.6875, 1.875}, {-0.6875, 
+       1.8125}, {-0.6875, 1.75}, {-0.75, 1.75}, {-0.8125, 1.75}, {-0.8125, 
+       1.8125}, {-0.8125, 1.875}, {-0.75, 1.875}, {-0.75, 1.9375}, {-0.6875, 
+       1.9375}, {-0.625, 1.9375}, {-0.625, 1.875}, {-0.625, 1.9375}, {-0.5625,
+        1.9375}, {-0.5, 1.9375}, {-0.5, 1.875}, {-0.4375, 1.875}, {-0.4375, 
+       1.8125}, {-0.4375, 1.75}, {-0.5, 1.75}, {-0.5, 1.8125}, {-0.4375, 
+       1.8125}, {-0.375, 1.8125}, {-0.375, 1.75}, {-0.3125, 1.75}, {-0.3125, 
+       1.6875}, {-0.3125, 1.625}, {-0.375, 1.625}, {-0.3125, 1.625}, {-0.3125,
+        1.5625}, {-0.3125, 1.5}, {-0.375, 1.5}, {-0.375, 1.4375}, {-0.4375, 
+       1.4375}, {-0.5, 1.4375}, {-0.5, 1.5}, {-0.5, 1.4375}, {-0.5625, 
+       1.4375}, {-0.625, 1.4375}, {-0.625, 1.5}, {-0.6875, 1.5}, {-0.6875, 
+       1.5625}, {-0.6875, 1.625}, {-0.625, 1.625}, {-0.6875, 1.625}, {-0.6875,
+        1.6875}, {-0.6875, 1.75}, {-0.625, 1.75}, {-0.625, 1.8125}, {-0.5625, 
+       1.8125}, {-0.5, 1.8125}, {-0.5, 1.75}, {-0.5625, 1.75}, {-0.5625, 
+       1.8125}, {-0.5625, 1.875}, {-0.5, 1.875}, {-0.5, 1.9375}, {-0.4375, 
+       1.9375}, {-0.375, 1.9375}, {-0.375, 1.875}, {-0.375, 1.9375}, {-0.3125,
+        1.9375}, {-0.25, 1.9375}, {-0.25, 1.875}, {-0.1875, 1.875}, {-0.1875, 
+       1.8125}, {-0.1875, 1.75}, {-0.25, 1.75}, {-0.3125, 1.75}, {-0.3125, 
+       1.8125}, {-0.3125, 1.875}, {-0.25, 1.875}, {-0.25, 1.9375}, {-0.1875, 
+       1.9375}, {-0.125, 1.9375}, {-0.125, 1.875}, {-0.125, 1.9375}, {-0.0625,
+        1.9375}, {0, 1.9375}, {0, 1.875}, {0.0625, 1.875}, {0.0625, 1.8125}, {
+       0.0625, 1.75}, {0, 1.75}, {0, 1.8125}, {0.0625, 1.8125}, {0.125, 
+       1.8125}, {0.125, 1.75}, {0.1875, 1.75}, {0.1875, 1.6875}, {0.1875, 
+       1.625}, {0.125, 1.625}, {0.1875, 1.625}, {0.1875, 1.5625}, {0.1875, 
+       1.5}, {0.125, 1.5}, {0.125, 1.4375}, {0.0625, 1.4375}, {0, 1.4375}, {
+       0, 1.5}, {-0.0625, 1.5}, {-0.0625, 1.5625}, {-0.0625, 1.625}, {
+       0, 1.625}, {0, 1.6875}, {0.0625, 1.6875}, {0.125, 1.6875}, {0.125, 
+       1.625}, {0.125, 1.6875}, {0.1875, 1.6875}, {0.25, 1.6875}, {0.25, 
+       1.625}, {0.3125, 1.625}, {0.3125, 1.5625}, {0.3125, 1.5}, {0.25, 
+       1.5}, {0.25, 1.5625}, {0.3125, 1.5625}, {0.375, 1.5625}, {0.375, 
+       1.5}, {0.4375, 1.5}, {0.4375, 1.4375}, {0.4375, 1.375}, {0.375, 
+       1.375}, {0.4375, 1.375}, {0.4375, 1.3125}, {0.4375, 1.25}, {0.375, 
+       1.25}, {0.375, 1.1875}, {0.3125, 1.1875}, {0.25, 1.1875}, {0.25, 
+       1.25}, {0.25, 1.3125}, {0.3125, 1.3125}, {0.375, 1.3125}, {0.375, 
+       1.25}, {0.4375, 1.25}, {0.4375, 1.1875}, {0.4375, 1.125}, {0.375, 
+       1.125}, {0.4375, 1.125}, {0.4375, 1.0625}, {0.4375, 1}, {0.375, 1}, {
+       0.375, 0.9375}, {0.3125, 0.9375}, {0.25, 0.9375}, {0.25, 1}, {
+       0.3125, 1}, {0.3125, 0.9375}, {0.3125, 0.875}, {0.25, 0.875}, {0.25, 
+       0.8125}, {0.1875, 0.8125}, {0.125, 0.8125}, {0.125, 0.875}, {0.125, 
+       0.8125}, {0.0625, 0.8125}, {0, 0.8125}, {0, 0.875}, {-0.0625, 
+       0.875}, {-0.0625, 0.9375}, {-0.0625, 1}, {0, 1}, {0.0625, 1}, {0.0625, 
+       0.9375}, {0.0625, 0.875}, {0, 0.875}, {0, 0.8125}, {-0.0625, 
+       0.8125}, {-0.125, 0.8125}, {-0.125, 0.875}, {-0.125, 0.8125}, {-0.1875,
+        0.8125}, {-0.25, 0.8125}, {-0.25, 0.875}, {-0.3125, 0.875}, {-0.3125, 
+       0.9375}, {-0.3125, 1}, {-0.25, 1}, {-0.25, 0.9375}, {-0.3125, 
+       0.9375}, {-0.375, 0.9375}, {-0.375, 1}, {-0.4375, 1}, {-0.4375, 
+       1.0625}, {-0.4375, 1.125}, {-0.375, 1.125}, {-0.4375, 1.125}, {-0.4375,
+        1.1875}, {-0.4375, 1.25}, {-0.375, 1.25}, {-0.375, 1.3125}, {-0.3125, 
+       1.3125}, {-0.25, 1.3125}, {-0.25, 1.25}, {-0.25, 1.1875}, {-0.3125, 
+       1.1875}, {-0.375, 1.1875}, {-0.375, 1.25}, {-0.4375, 1.25}, {-0.4375, 
+       1.3125}, {-0.4375, 1.375}, {-0.375, 1.375}, {-0.4375, 1.375}, {-0.4375,
+        1.4375}, {-0.4375, 1.5}, {-0.375, 1.5}, {-0.375, 1.5625}, {-0.3125, 
+       1.5625}, {-0.25, 1.5625}, {-0.25, 1.5}, {-0.3125, 1.5}, {-0.3125, 
+       1.5625}, {-0.3125, 1.625}, {-0.25, 1.625}, {-0.25, 1.6875}, {-0.1875, 
+       1.6875}, {-0.125, 1.6875}, {-0.125, 1.625}, {-0.125, 1.6875}, {-0.0625,
+        1.6875}, {0, 1.6875}, {0, 1.625}, {0.0625, 1.625}, {0.0625, 1.5625}, {
+       0.0625, 1.5}, {0, 1.5}, {0, 1.4375}, {-0.0625, 1.4375}, {-0.125, 
+       1.4375}, {-0.125, 1.5}, {-0.1875, 1.5}, {-0.1875, 1.5625}, {-0.1875, 
+       1.625}, {-0.125, 1.625}, {-0.1875, 1.625}, {-0.1875, 1.6875}, {-0.1875,
+        1.75}, {-0.125, 1.75}, {-0.125, 1.8125}, {-0.0625, 1.8125}, {
+       0, 1.8125}, {0, 1.75}, {-0.0625, 1.75}, {-0.0625, 1.8125}, {-0.0625, 
+       1.875}, {0, 1.875}, {0, 1.9375}, {0.0625, 1.9375}, {0.125, 1.9375}, {
+       0.125, 1.875}, {0.125, 1.9375}, {0.1875, 1.9375}, {0.25, 1.9375}, {
+       0.25, 1.875}, {0.3125, 1.875}, {0.3125, 1.8125}, {0.3125, 1.75}, {0.25,
+        1.75}, {0.1875, 1.75}, {0.1875, 1.8125}, {0.1875, 1.875}, {0.25, 
+       1.875}, {0.25, 1.9375}, {0.3125, 1.9375}, {0.375, 1.9375}, {0.375, 
+       1.875}, {0.375, 1.9375}, {0.4375, 1.9375}, {0.5, 1.9375}, {0.5, 
+       1.875}, {0.5625, 1.875}, {0.5625, 1.8125}, {0.5625, 1.75}, {0.5, 
+       1.75}, {0.5, 1.8125}, {0.5625, 1.8125}, {0.625, 1.8125}, {0.625, 
+       1.75}, {0.6875, 1.75}, {0.6875, 1.6875}, {0.6875, 1.625}, {0.625, 
+       1.625}, {0.6875, 1.625}, {0.6875, 1.5625}, {0.6875, 1.5}, {0.625, 
+       1.5}, {0.625, 1.4375}, {0.5625, 1.4375}, {0.5, 1.4375}, {0.5, 1.5}, {
+       0.5, 1.4375}, {0.4375, 1.4375}, {0.375, 1.4375}, {0.375, 1.5}, {0.3125,
+        1.5}, {0.3125, 1.5625}, {0.3125, 1.625}, {0.375, 1.625}, {0.3125, 
+       1.625}, {0.3125, 1.6875}, {0.3125, 1.75}, {0.375, 1.75}, {0.375, 
+       1.8125}, {0.4375, 1.8125}, {0.5, 1.8125}, {0.5, 1.75}, {0.4375, 
+       1.75}, {0.4375, 1.8125}, {0.4375, 1.875}, {0.5, 1.875}, {0.5, 
+       1.9375}, {0.5625, 1.9375}, {0.625, 1.9375}, {0.625, 1.875}, {0.625, 
+       1.9375}, {0.6875, 1.9375}, {0.75, 1.9375}, {0.75, 1.875}, {0.8125, 
+       1.875}, {0.8125, 1.8125}, {0.8125, 1.75}, {0.75, 1.75}, {0.6875, 
+       1.75}, {0.6875, 1.8125}, {0.6875, 1.875}, {0.75, 1.875}, {0.75, 
+       1.9375}, {0.8125, 1.9375}, {0.875, 1.9375}, {0.875, 1.875}, {0.875, 
+       1.9375}, {0.9375, 1.9375}, {1, 1.9375}, {1, 1.875}, {1.0625, 1.875}, {
+       1.0625, 1.8125}, {1.0625, 1.75}, {1, 1.75}, {1, 1.8125}, {1.0625, 
+       1.8125}, {1.125, 1.8125}, {1.125, 1.75}, {1.1875, 1.75}, {1.1875, 
+       1.6875}, {1.1875, 1.625}, {1.125, 1.625}, {1.1875, 1.625}, {1.1875, 
+       1.5625}, {1.1875, 1.5}, {1.125, 1.5}, {1.125, 1.4375}, {1.0625, 
+       1.4375}, {1, 1.4375}, {1, 1.5}, {0.9375, 1.5}, {0.9375, 1.5625}, {
+       0.9375, 1.625}, {1, 1.625}, {1, 1.6875}, {1.0625, 1.6875}, {1.125, 
+       1.6875}, {1.125, 1.625}, {1.125, 1.6875}, {1.1875, 1.6875}, {1.25, 
+       1.6875}, {1.25, 1.625}, {1.3125, 1.625}, {1.3125, 1.5625}, {1.3125, 
+       1.5}, {1.25, 1.5}, {1.25, 1.5625}, {1.3125, 1.5625}, {1.375, 1.5625}, {
+       1.375, 1.5}, {1.4375, 1.5}, {1.4375, 1.4375}, {1.4375, 1.375}, {1.375, 
+       1.375}, {1.4375, 1.375}, {1.4375, 1.3125}, {1.4375, 1.25}, {1.375, 
+       1.25}, {1.375, 1.1875}, {1.3125, 1.1875}, {1.25, 1.1875}, {1.25, 
+       1.25}, {1.25, 1.3125}, {1.3125, 1.3125}, {1.375, 1.3125}, {1.375, 
+       1.25}, {1.4375, 1.25}, {1.4375, 1.1875}, {1.4375, 1.125}, {1.375, 
+       1.125}, {1.4375, 1.125}, {1.4375, 1.0625}, {1.4375, 1}, {1.375, 1}, {
+       1.375, 0.9375}, {1.3125, 0.9375}, {1.25, 0.9375}, {1.25, 1}, {
+       1.3125, 1}, {1.3125, 0.9375}, {1.3125, 0.875}, {1.25, 0.875}, {1.25, 
+       0.8125}, {1.1875, 0.8125}, {1.125, 0.8125}, {1.125, 0.875}, {1.125, 
+       0.8125}, {1.0625, 0.8125}, {1, 0.8125}, {1, 0.875}, {0.9375, 0.875}, {
+       0.9375, 0.9375}, {0.9375, 1}, {1, 1}, {1, 0.9375}, {0.9375, 0.9375}, {
+       0.875, 0.9375}, {0.875, 1}, {0.8125, 1}, {0.8125, 1.0625}, {0.8125, 
+       1.125}, {0.875, 1.125}, {0.8125, 1.125}, {0.8125, 1.1875}, {0.8125, 
+       1.25}, {0.875, 1.25}, {0.875, 1.3125}, {0.9375, 1.3125}, {1, 1.3125}, {
+       1, 1.25}, {0.9375, 1.25}, {0.9375, 1.3125}, {0.9375, 1.375}, {
+       1, 1.375}, {1, 1.4375}, {1.0625, 1.4375}, {1.125, 1.4375}, {1.125, 
+       1.375}, {1.125, 1.4375}, {1.1875, 1.4375}, {1.25, 1.4375}, {1.25, 
+       1.375}, {1.3125, 1.375}, {1.3125, 1.3125}, {1.3125, 1.25}, {1.25, 
+       1.25}, {1.1875, 1.25}, {1.1875, 1.3125}, {1.1875, 1.375}, {1.25, 
+       1.375}, {1.25, 1.4375}, {1.3125, 1.4375}, {1.375, 1.4375}, {1.375, 
+       1.375}, {1.375, 1.4375}, {1.4375, 1.4375}, {1.5, 1.4375}, {1.5, 
+       1.375}, {1.5625, 1.375}, {1.5625, 1.3125}, {1.5625, 1.25}, {1.5, 
+       1.25}, {1.5, 1.3125}, {1.5625, 1.3125}, {1.625, 1.3125}, {1.625, 
+       1.25}, {1.6875, 1.25}, {1.6875, 1.1875}, {1.6875, 1.125}, {1.625, 
+       1.125}, {1.6875, 1.125}, {1.6875, 1.0625}, {1.6875, 1}, {1.625, 1}, {
+       1.625, 0.9375}, {1.5625, 0.9375}, {1.5, 0.9375}, {1.5, 1}, {
+       1.4375, 1}, {1.4375, 1.0625}, {1.4375, 1.125}, {1.5, 1.125}, {1.5, 
+       1.1875}, {1.5625, 1.1875}, {1.625, 1.1875}, {1.625, 1.125}, {1.625, 
+       1.1875}, {1.6875, 1.1875}, {1.75, 1.1875}, {1.75, 1.125}, {1.8125, 
+       1.125}, {1.8125, 1.0625}, {1.8125, 1}, {1.75, 1}, {1.75, 1.0625}, {
+       1.8125, 1.0625}, {1.875, 1.0625}, {1.875, 1}, {1.9375, 1}, {1.9375, 
+       0.9375}, {1.9375, 0.875}, {1.875, 0.875}, {1.9375, 0.875}, {1.9375, 
+       0.8125}, {1.9375, 0.75}, {1.875, 0.75}, {1.875, 0.6875}, {1.8125, 
+       0.6875}, {1.75, 0.6875}, {1.75, 0.75}, {1.75, 0.8125}, {1.8125, 
+       0.8125}, {1.875, 0.8125}, {1.875, 0.75}, {1.9375, 0.75}, {1.9375, 
+       0.6875}, {1.9375, 0.625}, {1.875, 0.625}, {1.9375, 0.625}, {1.9375, 
+       0.5625}, {1.9375, 0.5}, {1.875, 0.5}, {1.875, 0.4375}, {1.8125, 
+       0.4375}, {1.75, 0.4375}, {1.75, 0.5}, {1.8125, 0.5}, {1.8125, 
+       0.4375}, {1.8125, 0.375}, {1.75, 0.375}, {1.75, 0.3125}, {1.6875, 
+       0.3125}, {1.625, 0.3125}, {1.625, 0.375}, {1.625, 0.3125}, {1.5625, 
+       0.3125}, {1.5, 0.3125}, {1.5, 0.375}, {1.4375, 0.375}, {1.4375, 
+       0.4375}, {1.4375, 0.5}, {1.5, 0.5}, {1.4375, 0.5}, {1.4375, 0.5625}, {
+       1.4375, 0.625}, {1.5, 0.625}, {1.5, 0.6875}, {1.5625, 0.6875}, {1.625, 
+       0.6875}, {1.625, 0.625}, {1.625, 0.6875}, {1.6875, 0.6875}, {1.75, 
+       0.6875}, {1.75, 0.625}, {1.8125, 0.625}, {1.8125, 0.5625}, {1.8125, 
+       0.5}, {1.75, 0.5}, {1.75, 0.5625}, {1.8125, 0.5625}, {1.875, 0.5625}, {
+       1.875, 0.5}, {1.9375, 0.5}, {1.9375, 0.4375}, {1.9375, 0.375}, {1.875, 
+       0.375}, {1.9375, 0.375}, {1.9375, 0.3125}, {1.9375, 0.25}, {1.875, 
+       0.25}, {1.875, 0.1875}, {1.8125, 0.1875}, {1.75, 0.1875}, {1.75, 
+       0.25}, {1.75, 0.3125}, {1.8125, 0.3125}, {1.875, 0.3125}, {1.875, 
+       0.25}, {1.9375, 0.25}, {1.9375, 0.1875}, {1.9375, 0.125}, {1.875, 
+       0.125}, {1.9375, 0.125}, {1.9375, 0.0625}, {1.9375, 0}, {1.875, 0}, {
+       1.875, -0.0625}, {1.8125, -0.0625}, {1.75, -0.0625}, {1.75, 0}, {
+       1.8125, 0}, {1.8125, -0.0625}, {1.8125, -0.125}, {1.75, -0.125}, {
+       1.75, -0.1875}, {1.6875, -0.1875}, {1.625, -0.1875}, {1.625, -0.125}, {
+       1.625, -0.1875}, {1.5625, -0.1875}, {1.5, -0.1875}, {1.5, -0.125}, {
+       1.4375, -0.125}, {1.4375, -0.0625}, {1.4375, 0}, {1.5, 0}, {1.5, 
+       0.0625}, {1.5625, 0.0625}, {1.625, 0.0625}, {1.625, 0}, {1.6875, 0}, {
+       1.6875, -0.0625}, {1.6875, -0.125}, {1.625, -0.125}, {
+       1.6875, -0.125}, {1.6875, -0.1875}, {1.6875, -0.25}, {1.625, -0.25}, {
+       1.625, -0.3125}, {1.5625, -0.3125}, {1.5, -0.3125}, {1.5, -0.25}, {
+       1.5625, -0.25}, {1.5625, -0.3125}, {1.5625, -0.375}, {1.5, -0.375}, {
+       1.5, -0.4375}, {1.4375, -0.4375}, {1.375, -0.4375}, {1.375, -0.375}, {
+       1.375, -0.4375}, {1.3125, -0.4375}, {1.25, -0.4375}, {1.25, -0.375}, {
+       1.1875, -0.375}, {1.1875, -0.3125}, {1.1875, -0.25}, {1.25, -0.25}, {
+       1.3125, -0.25}, {1.3125, -0.3125}, {1.3125, -0.375}, {1.25, -0.375}, {
+       1.25, -0.4375}, {1.1875, -0.4375}, {1.125, -0.4375}, {1.125, -0.375}, {
+       1.125, -0.4375}, {1.0625, -0.4375}, {1, -0.4375}, {1, -0.375}, {
+       0.9375, -0.375}, {0.9375, -0.3125}, {0.9375, -0.25}, {1, -0.25}, {
+       1, -0.3125}, {0.9375, -0.3125}, {0.875, -0.3125}, {0.875, -0.25}, {
+       0.8125, -0.25}, {0.8125, -0.1875}, {0.8125, -0.125}, {0.875, -0.125}, {
+       0.8125, -0.125}, {0.8125, -0.0625}, {0.8125, 0}, {0.875, 0}, {0.875, 
+       0.0625}, {0.9375, 0.0625}, {1, 0.0625}, {1, 0}}]],
+    ImageSize->{396., Automatic}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.763945920188813*^9, 3.7639459422384176`*^9}, {
+  3.763946002086434*^9, 3.763946060606988*^9}},
+ CellLabel->"Out[43]=",ExpressionUUID->"e22dcde9-1c4f-4a21-8af3-f1ee5051b51a"]
+}, Open  ]]
+},
+WindowSize->{1195, 677},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (2018\:5e743\:670828\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2084, 59, 139, "Input",ExpressionUUID->"c135087d-3d67-4c88-afc7-4581df583d59"],
+Cell[2667, 83, 335, 6, 32, "Output",ExpressionUUID->"82d68a65-a10a-4e1f-920c-15c67934b0c4"],
+Cell[3005, 91, 58647, 933, 243, "Output",ExpressionUUID->"cbb30df8-3267-401f-84a6-82a708c25fdb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61689, 1029, 1908, 53, 102, "Input",ExpressionUUID->"a04bfcff-1c50-4b76-9352-4c37e04b09e3"],
+Cell[63600, 1084, 61510, 1058, 268, "Output",ExpressionUUID->"e22dcde9-1c4f-4a21-8af3-f1ee5051b51a"]
+}, Open  ]]
+}
+]
+*)
+
